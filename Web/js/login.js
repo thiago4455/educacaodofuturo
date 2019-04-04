@@ -17,10 +17,6 @@ $(document).ready(function () {
 
             firebase.auth().signInWithEmailAndPassword(email, senha).then(snapshot => {
                 TransferirMenu(snapshot)
-                snapshot.user.updateProfile({
-                    photoURL: 'https://lh3.googleusercontent.com/-v7sIeaLVq3Q/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rd4uXe3qbKotOwhGJFfufNYZLr_NQ/mo/photo.jpg?sz=46'
-                })
-
             }).catch(error => {
                 console.log(error)
                 if (error.code == 'auth/user-not-found') {
