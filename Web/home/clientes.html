@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Vendas</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <!-- Fontes -->
+    <link rel="stylesheet" href="../fonts/fontes.css">
+
+    <link rel="stylesheet" href="../css/clientes.css">
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div class="" id="loading">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1>Carregando...</h1>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-addCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <input id="modal-nome" type="text" class=" modal-input"
+                                    placeholder="Digite o nome completo do cliente">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input id="modal-cpf" type="text" class="modal-input"
+                                    placeholder="Digite o cpf do cliente">
+                            </div>
+                            <div class="form-group col-6">
+                                <input id="modal-telefone" type="text" class="modal-input"
+                                    placeholder="Digite o telefone do cliente">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-8">
+                                <input id="modal-email" type="email" class="modal-input"
+                                    placeholder="Digite o email do cliente">
+                            </div>
+                            <div class="form-group col-4">
+                                <input id="modal-cep" type="text" class="modal-input"
+                                    placeholder="Digite o cep do cliente">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="modal-input" id="modal-rua"
+                                    placeholder="Digite a rua do cliente">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="modal-input" id="modal-bairro"
+                                    placeholder="Digite o bairro do cliente">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="modal-input" id="modal-cidade"
+                                    placeholder="Digite a cidade do cliente">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select id="modal-estado" class="modal-input">
+                                    <option selected class="modal-input">Selecione...</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espirito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="text" class="modal-input" id="modal-numero" placeholder="Número">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="modal-limpar">Limpar Formulário</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal-sair">Sair</button>
+                    <button type="button" class="btn btn-success" id="modal-adicionar">Adicionar Cliente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top">
+        <h1 id="title">Clientes</h1>
+        <div class="order">
+            <h1 id="order-title">Ordernar por:</h1>
+            <div id="order-nome" class="order-item order-item-active">
+                <p>Nome</p>
+            </div>
+            <div id="order-quant" class="order-item">
+                <p>Quantidade</p>
+            </div>
+            <div id="order-preco" class="order-item">
+                <p>Preço</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bar-options">
+        <div class="btn" id="btn-adicionar" data-toggle="modal" data-target="#modal-addCliente">Adicionar Cliente</div>
+    </div>
+
+    <div class="main">
+        <table class="table table-bordered" id="table-prod">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cpf</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Cep</th>
+                    <th scope="col">Rua</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Número</th>
+                </tr>
+            </thead>
+            <tbody id="table-info">
+
+            </tbody>
+        </table>
+    </div> <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script type="text/javascript" src="../js/firebase.js">
+    </script>
+
+    <!-- My Js -->
+
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery.mask.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            firebase.auth().onAuthStateChanged(function (user) {
+
+                if (user) {
+
+                }
+                else {
+                    window.location.href = '../index'
+                }
+
+            });
+
+            $('#modal-limpar').click(function (e) {
+                e.preventDefault()
+                LimparForm()
+            })
+
+            function LimparForm() {
+                $('#modal-nome').val('')
+                $('#modal-cpf').val('')
+                $('#modal-telefone').val('')
+                $('#modal-email').val('')
+                $('#modal-cep').val('')
+                $('#modal-rua').val('')
+                $('#modal-bairro').val('')
+                $('#modal-cidade').val('')
+                $('#modal-estado').val('Selecione...')
+                $('#modal-numero').val('')
+            }
+
+
+            $('#modal-adicionar').click(function () {
+                const nome = $('#modal-nome').val()
+                const cpf = $('#modal-cpf').val()
+                const telefone = $('#modal-telefone').val()
+                const email = $('#modal-email').val()
+                const cep = $('#modal-cep').val()
+                const rua = $('#modal-rua').val()
+                const bairro = $('#modal-bairro').val()
+                const cidade = $('#modal-cidade').val()
+                const estado = $('#modal-estado').val()
+                const numero = $('#modal-numero').val()
+
+                if (!nome || !cpf || !telefone || !email || !cep || !rua || !bairro || !cidade || !estado || estado == 'Selecione...' || !numero) {
+                    alert('Preencha todos os campos')
+                }
+                else {
+                    firebase.firestore().collection('Clientes').add({
+                        nome: nome,
+                        cpf: cpf,
+                        telefone: telefone,
+                        email: email,
+                        cep: cep,
+                        rua: rua,
+                        bairro: bairro,
+                        cidade: cidade,
+                        estado: estado,
+                        numero: numero
+                    }).then(function () {
+                        alert('Cliente cadastrado com sucesso')
+                        $('#modal-addCliente').modal('hide')                        
+                        LimparForm()
+                        $('#table-info').html('')
+                        OrderByName()
+                    })
+                }
+            })
+
+            function OrderByName() {
+                firebase.firestore().collection("Clientes").orderBy("nome", "asc").get().then(function (querySnapshot) {
+                    querySnapshot.forEach(function (doc) {
+                        console.log(doc)
+                        const data = doc.data();
+                        $('#table-info').append("<tr> <th>" + data.nome + "</th> <th>" + data.cpf + "</th> <th>" + data.telefone + "</th> <th>" + data.email + "</th> <th>" + data.cep + "</th> <th>" + data.rua + "</th> <th>" + data.bairro + "</th> <th>" + data.cidade + "</th> <th>" + data.estado + "</th> <th>" + data.numero + "</th> </tr>")
+                    });
+                });
+                setTimeout(OrderLoad, 2000)
+            }
+
+            OrderByName()
+
+            $('.order-item').click(function () {
+                id = $(this).attr("id")
+                LimparOrder(id)
+            })
+
+            function LimparOrder(id) {
+                $('.order-item').removeClass('order-item-active')
+                $('#' + id).addClass('order-item-active')
+                $('#table-info').html('')
+                $('#loading').css('display', 'flex')
+
+                if (id == 'order-nome') {
+                    OrderByName()
+                }
+                else if (id == 'order-quant') {
+                    OrderByQuant()
+                }
+                else {
+                    OrderByPreco()
+                }
+            }
+        })
+
+        $(window).on('load', function () {
+
+            setTimeout(OrderLoad, 2000)
+
+        })
+
+        function OrderLoad() {
+            $('#loading').css('display', 'none')
+        }
+
+        $('#modal-cep').mask('00000-000');
+        $('#modal-cpf').mask('000.000.000-00', { reverse: true });
+        $('#modal-telefone').mask('(00) 00000-0000')
+
+
+        $("#modal-cep").keyup(function () {
+
+            if ($('#modal-cep').val().length == 9) {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if (validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#modal-rua").val("Aguarde...");
+                        $("#modal-bairro").val("Aguarde...");
+                        $("#modal-cidade").val("Aguarde...");
+                        $("#modal-estado").val("Aguarde...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#modal-rua").val(dados.logradouro);
+                                $("#modal-bairro").val(dados.bairro);
+                                $("#modal-cidade").val(dados.localidade);
+                                $("#modal-estado").val(dados.uf);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                }
+            }
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

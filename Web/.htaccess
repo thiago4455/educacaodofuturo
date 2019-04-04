@@ -1,0 +1,8 @@
+# Hide .html extension
+## External Redirect
+ErrorDocument 404 http://localhost/educacaodofuturoweb/error.html
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
