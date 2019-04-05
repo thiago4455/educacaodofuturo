@@ -21,12 +21,14 @@ $(document).ready(function () {
         $('#modal-cpf').val('')
         $('#modal-telefone').val('')
         $('#modal-email').val('')
+        $('#modal-senha').val('')
         $('#modal-cep').val('')
         $('#modal-rua').val('')
         $('#modal-bairro').val('')
         $('#modal-cidade').val('')
         $('#modal-estado').val('Selecione...')
         $('#modal-numero').val('')
+        $('#modal-cargo').val('Cargo...')
     }
 
 
@@ -35,14 +37,16 @@ $(document).ready(function () {
         const cpf = $('#modal-cpf').val()
         const telefone = $('#modal-telefone').val()
         const email = $('#modal-email').val()
+        const senha = $('#modal-senha').val()
         const cep = $('#modal-cep').val()
         const rua = $('#modal-rua').val()
         const bairro = $('#modal-bairro').val()
         const cidade = $('#modal-cidade').val()
         const estado = $('#modal-estado').val()
         const numero = $('#modal-numero').val()
+        const cargo = $('#modal-cargo').val()
 
-        if (!nome || !cpf || !telefone || !email || !cep || !rua || !bairro || !cidade || !estado || estado == 'Selecione...' || !numero) {
+        if (!nome || !cpf || !telefone || !email || !senha || !cep || !rua || !bairro || !cidade || !estado || estado == 'Selecione...' || !numero || cargo == 'Cargo...') {
             alert('Preencha todos os campos')
         }
         else {
@@ -51,6 +55,7 @@ $(document).ready(function () {
                 cpf: cpf,
                 telefone: telefone,
                 email: email,
+                senha: senha,
                 cep: cep,
                 rua: rua,
                 bairro: bairro,
