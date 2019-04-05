@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1;
-    min-height: 210px;
+    min-height: 205px;
 }
 
 .info {
@@ -74,8 +74,8 @@ body {
 
 .card-bottom {
     width: 100%;
-    height: 40px;
-    min-height: 40px;
+    height: 45px;
+    min-height: 45px;
     display: flex;
     align-items: center;
     color: #fff;
@@ -86,20 +86,24 @@ body {
     background-color: #e91e63;
 }
 
-#card-pedAberto {
+#card-pedagogo {
     background-color: #6f42c1;
 }
 
-#card-pedPagos {
+#card-coordenador {
     background-color: #4caf50;
 }
 
-#card-estoque {
+#card-secretaria {
     background-color: #ff9800;
 }
 
-#card-transporte {
+#card-bibliotecario {
     background-color: #f44336;
+}
+
+#card-auxiliar {
+    background-color: cornflowerblue;
 }
 
 .card-bottom:hover {
@@ -132,6 +136,7 @@ body {
     .card-bottom {
         height: 40px;
         max-height: 40px;
+        min-height: 40px;
     }
     .info {
         width: 75%;

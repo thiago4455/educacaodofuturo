@@ -38,12 +38,12 @@
         <div class="card-home">
             <div class="card-info">
                 <div class="info">
-                    <p id="info-numero-cursos" class="info-numero">55</p>
+                    <p id="info-numero-cursos" class="info-numero"></p>
                     <p id="info-desc">
                         Cursos Cadastrados
                     </p>
                     <p id="info-hoje">
-                        13 hoje
+                        0 hoje
                     </p>
                 </div>
                 <div class="card-icon">
@@ -58,19 +58,19 @@
         <div class="card-home">
             <div class="card-info">
                 <div class="info">
-                    <p id="info-numero-pedAberto" class="info-numero">55</p>
+                    <p id="info-numero-pedagogo" class="info-numero">55</p>
                     <p id="info-desc">
-                        Pedidos em aberto
+                        Pedagogos(as)
                     </p>
                     <p id="info-hoje">
-                        13 hoje
+                        0 hoje
                     </p>
                 </div>
                 <div class="card-icon">
-                    <img src="../../assets/icons/shopping-cart.png" alt="shopping-cart">
+                    <img src="../../assets/icons/pedagogo.png" alt="pedagogos">
                 </div>
             </div>
-            <div class="card-bottom" id="card-pedAberto">
+            <div class="card-bottom" id="card-pedagogo">
                 <p>VER DETALHES</p>
             </div>
         </div>
@@ -78,19 +78,19 @@
         <div class="card-home">
             <div class="card-info">
                 <div class="info">
-                    <p id="info-numero-pedPagos" class="info-numero">33</p>
+                    <p id="info-numero-coordenador" class="info-numero">55</p>
                     <p id="info-desc">
-                        Pedidos pagos
+                        Coordenadores(as)
                     </p>
                     <p id="info-hoje">
-                        13 hoje
+                        0 hoje
                     </p>
                 </div>
                 <div class="card-icon">
-                    <img src="../../assets/icons/money.png" alt="money">
+                    <img src="../../assets/icons/coordenador.png" alt="coordenador">
                 </div>
             </div>
-            <div class="card-bottom" id="card-pedPagos">
+            <div class="card-bottom" id="card-coordenador">
                 <p>VER DETALHES</p>
             </div>
         </div>
@@ -98,19 +98,19 @@
         <div class="card-home">
             <div class="card-info">
                 <div class="info">
-                    <p id="info-numero-prod" class="info-numero">
-                        <p id="info-desc">
-                            Produtos em estoque
-                        </p>
-                        <p id="info-hoje">
-                            25 hoje
-                        </p>
+                    <p id="info-numero-secretaria" class="info-numero">55</p>
+                    <p id="info-desc">
+                        Secretários(as)
+                    </p>
+                    <p id="info-hoje">
+                        0 hoje
+                    </p>
                 </div>
                 <div class="card-icon">
-                    <img src="../../assets/icons/package.png" alt="package">
+                    <img src="../../assets/icons/secretaria.png" alt="secretaria">
                 </div>
             </div>
-            <div class="card-bottom" id="card-estoque">
+            <div class="card-bottom" id="card-secretaria">
                 <p>VER DETALHES</p>
             </div>
         </div>
@@ -118,22 +118,43 @@
         <div class="card-home">
             <div class="card-info">
                 <div class="info">
-                    <p id="info-numero-transporte" class="info-numero">160</p>
+                    <p id="info-numero-bibliotecario" class="info-numero">55</p>
                     <p id="info-desc">
-                        Pedidos em transporte
+                        Bibliotecários(as)
                     </p>
                     <p id="info-hoje">
-                        7 hoje
+                        0 hoje
                     </p>
                 </div>
                 <div class="card-icon">
-                    <img src="../../assets/icons/truck.png" alt="truck">
+                    <img src="../../assets/icons/bibliotecario.png" alt="bibliotecario">
                 </div>
             </div>
-            <div class="card-bottom" id="card-transporte">
+            <div class="card-bottom" id="card-bibliotecario">
                 <p>VER DETALHES</p>
             </div>
         </div>
+
+        <div class="card-home">
+            <div class="card-info">
+                <div class="info">
+                    <p id="info-numero-auxiliar" class="info-numero">55</p>
+                    <p id="info-desc">
+                        Auxiliares
+                    </p>
+                    <p id="info-hoje">
+                        0 hoje
+                    </p>
+                </div>
+                <div class="card-icon">
+                    <img src="../../assets/icons/auxiliar.png" alt="auxiliar">
+                </div>
+            </div>
+            <div class="card-bottom" id="card-auxiliar">
+                <p>VER DETALHES</p>
+            </div>
+        </div>
+
     </div>
 
 
@@ -152,49 +173,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
-
-    <script>
-
-        $(document).ready(function () {
-            firebase.auth().onAuthStateChanged(function (user) {
-
-                if (user) {
-
-                }
-                else {
-                    window.location.href = '../../index'
-                }
-
-            });
-
-            var numProd = 0;
-            firebase.firestore().collection('Produtos').get().then(function (snapshot) {
-                snapshot.forEach(function (doc) {
-                    var quantidade = doc.data().quantidade
-                    numProd = parseInt(numProd) + parseInt(quantidade)
-                })
-                $('#info-numero-prod').append(numProd)
-
-            })
-        })
-
-        $(window).on('load', function () {
-
-            $('#loading').css('display', 'none')
-
-        })
-
-        $('.card-bottom').click(function () {
-            id = $(this).attr("id")
-            Page(id)
-        })
-
-        function Page(id) {
-            // if (id ==)
-        }
-
-    </script>
 
 </body>
 

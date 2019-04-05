@@ -22,6 +22,7 @@ body {
 #title {
 	font-size: 1.8rem;
 	font-family: 'Google-Bold';
+	margin: 0;
 }
 
 .bar-options {
@@ -107,8 +108,12 @@ body {
 	margin: 0;
 }
 
+#table-info {
+	font-family: 'Mont-Reg';
+}
+
 .modal-dialog {
-    max-width: 900px;
+	max-width: 900px;
 }
 
 .modal-input {
@@ -116,8 +121,8 @@ body {
 	height: 50px;
 	border: #999;
 	background-color: #eee;
-    border-radius: 5px;
-    padding: 15px;
+	border-radius: 5px;
+	padding: 15px;
 }
 
 .col-6 {
@@ -129,6 +134,48 @@ body {
 	color: #333;
 }
 
+@media(max-width: 600px) {
+	#title {
+		font-size: 1.5rem;
+		font-family: 'Google-Bold';
+	}
+	.order {
+		display: none;
+	}
+	#btn-adicionar {
+		width: 120px;
+		height: 30px;
+		font-size: .7rem;
+	}
+	#table-prod {
+		font-size: .6rem;
+	}
+	.main {
+		width: 95%;
+	}
+	.table thead th {
+		vertical-align: middle;
+	}
+	
+	#table-info th {
+		font-size: .6rem;
+	}
+
+	.bar-options {
+		height: 50px;
+		margin: 5px 0;
+	}
+	.modal-input {
+		font-size: .9rem;
+	}
+	.modal-footer button {
+		font-size: .74rem;
+	}
+	.table td, .table th {
+		padding: 10px 5px 10px 7px;
+	}
+	
+}
 
 /* Loading */
 
