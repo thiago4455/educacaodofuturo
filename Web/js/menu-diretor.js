@@ -18,13 +18,13 @@ $(document).ready(function () {
     })
 
     $('.cel-menu').click(() => {
-        $('.nav-lateral').css('display','flex')
-        $('#btn-voltar').css('display','flex')
+        $('.nav-lateral').css('display', 'flex')
+        $('#btn-voltar').css('display', 'flex')
     })
 
     $('#btn-voltar').click(() => {
-        $('.nav-lateral').css('display','none')
-        $('#btn-voltar').css('display','none')
+        $('.nav-lateral').css('display', 'none')
+        $('#btn-voltar').css('display', 'none')
     })
 
 })

@@ -70,7 +70,6 @@ $(document).ready(function () {
     function OrderByName() {
         firebase.firestore().collection("Clientes").orderBy("nome", "asc").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
-                console.log(doc)
                 const data = doc.data();
                 $('#table-info').append("<tr> <th>" + data.nome + "</th> <th>" + data.cpf + "</th> <th>" + data.telefone + "</th> <th>" + data.email + "</th> <th>" + data.cep + "</th> <th>" + data.rua + "</th> <th>" + data.bairro + "</th> <th>" + data.cidade + "</th> <th>" + data.estado + "</th> <th>" + data.numero + "</th> </tr>")
             });

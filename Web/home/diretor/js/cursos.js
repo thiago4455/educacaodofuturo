@@ -53,7 +53,6 @@ $(document).ready(function () {
     function OrderByName() {
         firebase.firestore().collection("Cursos").orderBy("nome", "asc").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
-                console.log(doc)
                 const data = doc.data();
                 $('#table-info').append("<tr> <th>" + data.nome + "</th> <th>" + data.area + "</th> <th>" + data.cargaHor + ' horas' + "</th> <th>" + 'R$ ' + data.mensalidade + "</th> </tr>")
             });
