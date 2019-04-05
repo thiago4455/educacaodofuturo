@@ -8,7 +8,7 @@ using Firebase.Auth;
 
 namespace educacaodofuturo.Resources
 {
-    class Firebase
+    public class Firebase
     {
         FirestoreDb db;
         public Firebase()
@@ -53,6 +53,16 @@ namespace educacaodofuturo.Resources
             Dictionary<string, int> quantidades = new Dictionary<string, int>();
             var collection = await db.Collection("Cursos").GetSnapshotAsync();
             quantidades.Add("Cursos",collection.Count());
+            collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Pedagogo").GetSnapshotAsync();
+            quantidades.Add("Pedagogos", collection.Count());
+            collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Coordenador").GetSnapshotAsync();
+            quantidades.Add("Coordenadores", collection.Count());
+            collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Secretario").GetSnapshotAsync();
+            quantidades.Add("Secretarios", collection.Count());
+            collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Bibliotecario").GetSnapshotAsync();
+            quantidades.Add("Bibliotecarios", collection.Count());
+            collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Auxiliar").GetSnapshotAsync();
+            quantidades.Add("Auxiliares", collection.Count());
             action(quantidades);
 
         }

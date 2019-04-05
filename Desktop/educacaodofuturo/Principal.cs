@@ -14,8 +14,6 @@ namespace educacaodofuturo
 {
     public partial class Principal : Form
     {
-
-        bool senhaVisivel = false, senhaPlaceHolder = true, emailPlaceHolder = true;
         PrivateFontCollection pfc = new PrivateFontCollection(); int X = 0; int Y = 0;
         Form globalForm = null;
 

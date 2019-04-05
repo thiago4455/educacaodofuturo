@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.container = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.senha = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.containerTop = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.container.SuspendLayout();
             this.containerTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // container
@@ -57,6 +57,16 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(500, 350);
             this.container.TabIndex = 1;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblTitulo.Location = new System.Drawing.Point(40, 38);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(420, 36);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Login";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogin
             // 
@@ -80,7 +90,7 @@
             this.senha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.senha.Location = new System.Drawing.Point(40, 147);
+            this.senha.Location = new System.Drawing.Point(40, 143);
             this.senha.Name = "senha";
             this.senha.Size = new System.Drawing.Size(420, 24);
             this.senha.TabIndex = 1;
@@ -95,24 +105,13 @@
             this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.email.Location = new System.Drawing.Point(40, 88);
-            this.email.Multiline = true;
+            this.email.Location = new System.Drawing.Point(40, 95);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(420, 39);
+            this.email.Size = new System.Drawing.Size(420, 24);
             this.email.TabIndex = 0;
             this.email.Text = "Digite seu email";
             this.email.Enter += new System.EventHandler(this.email_Enter);
             this.email.Leave += new System.EventHandler(this.email_Leave);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.lblTitulo.Location = new System.Drawing.Point(40, 38);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(420, 36);
-            this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Login";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // containerTop
             // 
@@ -123,6 +122,16 @@
             this.containerTop.Name = "containerTop";
             this.containerTop.Size = new System.Drawing.Size(500, 68);
             this.containerTop.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(81, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 45);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -154,16 +163,6 @@
             this.background.TabIndex = 0;
             this.background.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(81, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 45);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
@@ -184,9 +183,9 @@
             this.container.ResumeLayout(false);
             this.container.PerformLayout();
             this.containerTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

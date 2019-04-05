@@ -20,6 +20,11 @@ namespace educacaodofuturo
         public void ResultQuantidades(Dictionary<string,int> quantidades)
         {
             lblQuantCursos.Text = quantidades["Cursos"].ToString();
+            lblQuantPedagogos.Text = quantidades["Pedagogos"].ToString();
+            lblQuantCoordenadores.Text = quantidades["Coordenadores"].ToString();
+            lblQuantSecretarios.Text = quantidades["Secretarios"].ToString();
+            lblQuantBibliotecarios.Text = quantidades["Bibliotecarios"].ToString();
+            lblQuantAuxiliares.Text = quantidades["Auxiliares"].ToString();
         }
     }
 }

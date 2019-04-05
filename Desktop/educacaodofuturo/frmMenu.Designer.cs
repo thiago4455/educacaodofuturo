@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlEsquerda = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.pnlDireita = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,16 @@
             this.pnlEsquerda.Name = "pnlEsquerda";
             this.pnlEsquerda.Size = new System.Drawing.Size(168, 500);
             this.pnlEsquerda.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // btnHome
             // 
@@ -66,24 +76,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pnlDireita
-            // 
-            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDireita.Location = new System.Drawing.Point(169, 0);
-            this.pnlDireita.Name = "pnlDireita";
-            this.pnlDireita.Size = new System.Drawing.Size(831, 500);
-            this.pnlDireita.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -96,6 +88,14 @@
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Gestão Escolar";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlDireita
+            // 
+            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDireita.Location = new System.Drawing.Point(169, 0);
+            this.pnlDireita.Name = "pnlDireita";
+            this.pnlDireita.Size = new System.Drawing.Size(831, 500);
+            this.pnlDireita.TabIndex = 1;
             // 
             // frmMenu
             // 

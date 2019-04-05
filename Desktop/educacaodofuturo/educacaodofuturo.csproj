@@ -198,16 +198,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fundo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Forms\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <None Include="Resources\cursos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cursos.png" />
+    <None Include="Resources\fundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" />
