@@ -23,7 +23,7 @@ namespace educacaodofuturo
         {
             InitializeComponent();
             AddFonts();
-            SetForm(new Forms.Login());
+            SetForm(new Login(SetForm));
         }
 
         public void SetForm(Form form)
@@ -95,8 +95,8 @@ namespace educacaodofuturo
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (MousePosition.Y <= 0) ;
-                else WindowState = FormWindowState.Normal;
+                if (MousePosition.Y > 0)
+                WindowState = FormWindowState.Normal;
                 Left = X + MousePosition.X;
                 Top = Y + MousePosition.Y;
             }

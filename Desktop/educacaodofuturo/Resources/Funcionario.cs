@@ -7,7 +7,7 @@ using Google.Cloud.Firestore;
 
 namespace educacaodofuturo.Resources
 {
-    class Funcionario
+    public class Funcionario
     {
         [FirestoreProperty("nome")]
         public string Nome { get; set; }
@@ -27,7 +27,7 @@ namespace educacaodofuturo.Resources
             this.action = action;
             try
             {
-                new Firebase().Login(ResultLogin, Email, Senha);
+                new Firebase().Login(ResultLogin, LoginErro, Email, Senha);
             }
             catch
             {
@@ -44,7 +44,13 @@ namespace educacaodofuturo.Resources
             Nome = snapshot.GetValue<string>("nome");
             Cargo = snapshot.GetValue<string>("cargo");
             action(this);
+        }
 
+        public void LoginErro(string erro)
+        {
+            Funcionario func = new Funcionario();
+            Id = "";
+            action(this);
         }
 
         public async void Cadastrar()
