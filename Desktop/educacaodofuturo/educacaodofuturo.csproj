@@ -127,6 +127,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdicionarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarCursos.Designer.cs">
+      <DependentUpon>frmAdicionarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,8 +165,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Cursos.cs" />
     <Compile Include="Resources\Firebase.cs" />
     <Compile Include="Resources\Funcionario.cs" />
+    <EmbeddedResource Include="frmAdicionarCursos.resx">
+      <DependentUpon>frmAdicionarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>

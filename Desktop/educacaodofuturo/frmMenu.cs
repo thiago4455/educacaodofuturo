@@ -36,5 +36,10 @@ namespace educacaodofuturo
         {
             SetForm(new frmHome());
         }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            SetForm(new frmCursos());
+        }
     }
 }

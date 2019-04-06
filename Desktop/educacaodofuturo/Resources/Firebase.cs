@@ -33,7 +33,7 @@ namespace educacaodofuturo.Resources
             }
         }
 
-        public async void Cadastrar(Dictionary<string, object> dados, Action<bool> action)
+        public async void CadastrarFuncionario(Dictionary<string, object> dados, Action<bool> action)
         {
             try
             {
@@ -48,6 +48,7 @@ namespace educacaodofuturo.Resources
                 action(false);
             }
         }
+
         public async void BuscarQuant(Action<Dictionary<string,int>> action)
         {
             Dictionary<string, int> quantidades = new Dictionary<string, int>();
@@ -65,6 +66,26 @@ namespace educacaodofuturo.Resources
             quantidades.Add("Auxiliares", collection.Count());
             action(quantidades);
 
+        }
+
+        public async void BuscarTodos(Action<QuerySnapshot> action, string collectionName)
+        {
+            var collection = await db.Collection(collectionName).GetSnapshotAsync();
+            action(collection);
+        }
+
+        public async void Cadastrar(Dictionary<string,object> values, Action<bool> action, string collectionString)
+        {
+            try
+            {
+                var collection = db.Collection(collectionString);
+                await collection.AddAsync(values);
+                action(true);
+            }
+            catch 
+            {
+                action(false);
+            }
         }
     }
 }

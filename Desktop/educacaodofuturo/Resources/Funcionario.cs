@@ -22,7 +22,7 @@ namespace educacaodofuturo.Resources
 
         private Action<Funcionario> action;
 
-        public async void Login(Action<Funcionario> action)
+        public void Login(Action<Funcionario> action)
         {
             this.action = action;
             try
@@ -53,14 +53,14 @@ namespace educacaodofuturo.Resources
             action(this);
         }
 
-        public async void Cadastrar()
+        public void Cadastrar()
         {
             Dictionary<string, object> values = new Dictionary<string, object>();
             values.Add("nome", Nome);
             values.Add("email", Email);
             values.Add("senha", Senha);
             values.Add("cargo", Cargo);
-            new Firebase().Cadastrar(values, CadastrarResult);
+            new Firebase().CadastrarFuncionario(values, CadastrarResult);
         }
 
         public void CadastrarResult(bool cadastrado)
