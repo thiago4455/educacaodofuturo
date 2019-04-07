@@ -63,6 +63,36 @@ namespace educacaodofuturo.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap auxiliar {
+            get {
+                object obj = ResourceManager.GetObject("auxiliar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bibliotecario {
+            get {
+                object obj = ResourceManager.GetObject("bibliotecario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coordenador {
+            get {
+                object obj = ResourceManager.GetObject("coordenador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cursos {
             get {
                 object obj = ResourceManager.GetObject("cursos", resourceCulture);
@@ -147,6 +177,26 @@ namespace educacaodofuturo.Properties {
             get {
                 object obj = ResourceManager.GetObject("Montserrat_Regular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pedagogo {
+            get {
+                object obj = ResourceManager.GetObject("pedagogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap secretaria {
+            get {
+                object obj = ResourceManager.GetObject("secretaria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

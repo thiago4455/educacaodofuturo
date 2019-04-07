@@ -80,7 +80,8 @@ namespace educacaodofuturo
             senha.Enabled = true;
             if (func.Id != "")
             {
-                action(new frmMenu(action, func));
+                if(func.Cargo == "Diretor")
+                action(new frmMenuDiretor(action, func));
             }
             else
             {

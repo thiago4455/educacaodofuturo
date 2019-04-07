@@ -39,6 +39,7 @@ namespace educacaodofuturo.Resources
             {
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyBPrkD1vH-whMr8f2jsaHxL716PTx53jhQ"));
                 var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(dados["email"].ToString(), dados["senha"].ToString());
+                dados.Remove("senha");
                 var collection = db.Collection("Funcionarios").Document(auth.User.LocalId);
                 await collection.CreateAsync(dados);
                 action(true);

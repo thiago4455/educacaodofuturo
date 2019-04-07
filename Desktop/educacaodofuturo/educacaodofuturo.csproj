@@ -133,11 +133,23 @@
     <Compile Include="frmAdicionarCursos.Designer.cs">
       <DependentUpon>frmAdicionarCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdicionarFuncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarFuncs.Designer.cs">
+      <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCursos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCursos.Designer.cs">
       <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncionarios.Designer.cs">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -145,11 +157,11 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
+    <Compile Include="frmMenuDiretor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <Compile Include="frmMenuDiretor.Designer.cs">
+      <DependentUpon>frmMenuDiretor.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -171,14 +183,20 @@
     <EmbeddedResource Include="frmAdicionarCursos.resx">
       <DependentUpon>frmAdicionarCursos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarFuncs.resx">
+      <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncionarios.resx">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="frmMenuDiretor.resx">
+      <DependentUpon>frmMenuDiretor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -227,6 +245,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedagogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coordenador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretaria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bibliotecario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auxiliar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" />

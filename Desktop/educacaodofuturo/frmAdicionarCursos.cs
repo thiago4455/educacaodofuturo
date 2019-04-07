@@ -26,9 +26,9 @@ namespace educacaodofuturo
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtNome.Text = "";
-            txtCargaHoraria.Text = "";
-            txtMensalidade.Text = "";
+            txtNome.Text = "Digite o nome do Curso";
+            txtCargaHoraria.Text = "Digite a carga horária do Curso";
+            txtMensalidade.Text = "Digite o valor da mensalidade (sem R$)";
             cboArea.SelectedIndex = 0;
         }
 

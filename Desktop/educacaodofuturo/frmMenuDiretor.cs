@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace educacaodofuturo
 {
-    public partial class frmMenu : Form
+    public partial class frmMenuDiretor : Form
     {
         Action<Form> action;
         Resources.Funcionario funcionario;
 
-        public frmMenu(Action<Form> act, Resources.Funcionario func)
+        public frmMenuDiretor(Action<Form> act, Resources.Funcionario func)
         {
             InitializeComponent();
             action = act;
@@ -40,6 +40,11 @@ namespace educacaodofuturo
         private void btnCursos_Click(object sender, EventArgs e)
         {
             SetForm(new frmCursos());
+        }
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            SetForm(new frmFuncionarios());
         }
     }
 }

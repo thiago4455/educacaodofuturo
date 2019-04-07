@@ -28,49 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.pnlCursos = new System.Windows.Forms.Panel();
             this.btnCursos = new System.Windows.Forms.Button();
             this.lblQuantCursos = new System.Windows.Forms.Label();
             this.lblCursos = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPedagogos = new System.Windows.Forms.Button();
             this.lblQuantPedagogos = new System.Windows.Forms.Label();
             this.lblPedagogos = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSecretarios = new System.Windows.Forms.Button();
             this.lblQuantSecretarios = new System.Windows.Forms.Label();
             this.lblSecretarios = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCoordenadores = new System.Windows.Forms.Button();
             this.lblQuantCoordenadores = new System.Windows.Forms.Label();
             this.lblCoordenadores = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnBibliotecarios = new System.Windows.Forms.Button();
             this.lblQuantBibliotecarios = new System.Windows.Forms.Label();
             this.lblBibliotecarios = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAuxiliares = new System.Windows.Forms.Button();
             this.lblQuantAuxiliares = new System.Windows.Forms.Label();
             this.lblAuxiliares = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlCursos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCursos
@@ -122,16 +121,6 @@
             this.lblCursos.TabIndex = 1;
             this.lblCursos.Text = "Cursos Cadastrados";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::educacaodofuturo.Properties.Resources.cursos;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -180,16 +169,6 @@
             this.lblPedagogos.Size = new System.Drawing.Size(105, 17);
             this.lblPedagogos.TabIndex = 1;
             this.lblPedagogos.Text = "Pedagogos(as)";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(79, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -240,16 +219,6 @@
             this.lblSecretarios.TabIndex = 1;
             this.lblSecretarios.Text = "Secretários(as)";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(79, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -299,16 +268,6 @@
             this.lblCoordenadores.TabIndex = 1;
             this.lblCoordenadores.Text = "Coordenadores(as)";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(79, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -357,16 +316,6 @@
             this.lblBibliotecarios.Size = new System.Drawing.Size(117, 17);
             this.lblBibliotecarios.TabIndex = 1;
             this.lblBibliotecarios.Text = "Bibliotecários(as)";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(79, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // panel5
             // 
@@ -419,13 +368,63 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImage = global::educacaodofuturo.Properties.Resources.auxiliar;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(79, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(61, 68);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::educacaodofuturo.Properties.Resources.bibliotecario;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(79, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(61, 68);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::educacaodofuturo.Properties.Resources.secretaria;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(79, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 68);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::educacaodofuturo.Properties.Resources.coordenador;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(79, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(61, 68);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.pedagogo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(79, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 68);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::educacaodofuturo.Properties.Resources.cursos;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(79, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 68);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmHome
             // 
@@ -443,22 +442,22 @@
             this.Text = "frmHome";
             this.pnlCursos.ResumeLayout(false);
             this.pnlCursos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
