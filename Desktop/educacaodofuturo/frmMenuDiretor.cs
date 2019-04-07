@@ -20,7 +20,8 @@ namespace educacaodofuturo
             InitializeComponent();
             action = act;
             funcionario = func;
-            SetForm(new frmHome());
+            SetForm(new frmHome(pnlDireita));
+
         }
 
         public void SetForm(Form form)
@@ -34,7 +35,7 @@ namespace educacaodofuturo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            SetForm(new frmHome());
+            SetForm(new frmHome(pnlDireita));
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
