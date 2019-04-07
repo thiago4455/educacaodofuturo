@@ -29,6 +29,7 @@ $(document).ready(function () {
         $('#modal-estado').val('Selecione...')
         $('#modal-numero').val('')
         $('#modal-cargo').val('Cargo...')
+        $('#modal-sexo').val('Sexo...')
     }
 
 
@@ -45,38 +46,58 @@ $(document).ready(function () {
         const estado = $('#modal-estado').val()
         const numero = $('#modal-numero').val()
         const cargo = $('#modal-cargo').val()
+        const sexo = $('#modal-sexo').val()
 
-        if (!nome || !cpf || !telefone || !email || !senha || !cep || !rua || !bairro || !cidade || !estado || estado == 'Selecione...' || !numero || cargo == 'Cargo...') {
+        if (!nome || !cpf || !telefone || !email || !senha || !cep || !rua || !bairro || !cidade || !estado || estado == 'Selecione...' || !numero || cargo == 'Cargo...' || !sexo || sexo == 'Sexo...') {
             alert('Preencha todos os campos')
         }
         else {
-            firebase.firestore().collection('Clientes').add({
-                nome: nome,
-                cpf: cpf,
-                telefone: telefone,
-                email: email,
-                senha: senha,
-                cep: cep,
-                rua: rua,
-                bairro: bairro,
-                cidade: cidade,
-                estado: estado,
-                numero: numero
-            }).then(function () {
-                alert('Cliente cadastrado com sucesso')
-                $('#modal-addCliente').modal('hide')                        
-                LimparForm()
-                $('#table-info').html('')
-                OrderByName()
-            })
+
+            firebase.auth().createUserWithEmailAndPassword(email, senha).then((snapshot) => {
+                console.log(snapshot)
+                if (sexo == 'Masculino') {
+                    photo = '../assets/icons/userMale.png'
+                }
+                else if (sexo == 'Feminino') {
+                    photo = '../assets/icons/userFemale.png'
+                }
+                else {
+                    photo = '../assets/userProfile/user.png'
+                }
+                snapshot.user.updateProfile({
+                    displayName: nome,
+                    phoneNumber: telefone,
+                    photoURL: photo
+                })
+                firebase.firestore().collection('Funcionarios').doc(snapshot.user.uid).set({
+                    nome: nome,
+                    telefone: telefone,
+                    cpf: cpf,
+                    email: email,
+                    cep: cep,
+                    rua: rua,
+                    bairro: bairro,
+                    cidade: cidade,
+                    estado: estado,
+                    numero: numero,
+                    cargo: cargo,
+                    sexo: sexo
+                }).then(function () {
+                    alert('Funcionário cadastrado com sucesso. Logue-se novamente por motivos de segurança')
+                    firebase.auth().signOut()
+                })
+            }).catch(function (error) {
+            });
+
+
         }
     })
 
     function OrderByName() {
-        firebase.firestore().collection("Clientes").orderBy("nome", "asc").get().then(function (querySnapshot) {
+        firebase.firestore().collection("Funcionarios").orderBy("cargo", "asc").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
                 const data = doc.data();
-                $('#table-info').append("<tr> <th>" + data.nome + "</th> <th>" + data.cpf + "</th> <th>" + data.telefone + "</th> <th>" + data.email + "</th> <th>" + data.cep + "</th> <th>" + data.rua + "</th> <th>" + data.bairro + "</th> <th>" + data.cidade + "</th> <th>" + data.estado + "</th> <th>" + data.numero + "</th> </tr>")
+                $('#table-info').append("<tr> <th>" + data.nome + "</th> <th>" + data.cargo + "</th> <th>" + data.email + "</th> <th>" + data.telefone + "</th> </tr>")
             });
         });
         setTimeout(OrderLoad, 2000)

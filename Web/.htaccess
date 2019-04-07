@@ -1,6 +1,6 @@
 # Hide .html extension
 ## External Redirect
-ErrorDocument 404 http://localhost/educacaodofuturo/Web/error.html
+### ErrorDocument 404 http://localhost/educacaodofuturo/Web/error.html
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
