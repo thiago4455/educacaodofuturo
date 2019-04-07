@@ -151,17 +151,29 @@
     <Compile Include="frmFuncionarios.Designer.cs">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHome.cs">
+    <Compile Include="frmHomeDiretor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHome.Designer.cs">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <Compile Include="frmHomeDiretor.Designer.cs">
+      <DependentUpon>frmHomeDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuCoordenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuCoordenador.Designer.cs">
+      <DependentUpon>frmMenuCoordenador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuDiretor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuDiretor.Designer.cs">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfessores.Designer.cs">
+      <DependentUpon>frmProfessores.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -192,11 +204,17 @@
     <EmbeddedResource Include="frmFuncionarios.resx">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHome.resx">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <EmbeddedResource Include="frmHomeDiretor.resx">
+      <DependentUpon>frmHomeDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuCoordenador.resx">
+      <DependentUpon>frmMenuCoordenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuDiretor.resx">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfessores.resx">
+      <DependentUpon>frmProfessores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

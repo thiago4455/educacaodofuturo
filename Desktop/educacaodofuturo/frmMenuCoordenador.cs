@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace educacaodofuturo
 {
-    public partial class frmMenuDiretor : Form
+    public partial class frmMenuCoordenador : Form
     {
-        Action<Form> action;
-        Resources.Funcionario funcionario;
-
-        public frmMenuDiretor(Action<Form> act, Resources.Funcionario func)
+        public frmMenuCoordenador()
         {
             InitializeComponent();
-            action = act;
-            funcionario = func;
-            SetForm(new frmHomeDiretor(pnlDireita));
-
         }
 
         public void SetForm(Form form)
@@ -35,17 +28,12 @@ namespace educacaodofuturo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            SetForm(new frmHomeDiretor(pnlDireita));
+            
         }
 
-        private void btnCursos_Click(object sender, EventArgs e)
+        private void btnProfessores_Click(object sender, EventArgs e)
         {
-            SetForm(new frmCursos());
-        }
-
-        private void btnFuncionarios_Click(object sender, EventArgs e)
-        {
-            SetForm(new frmFuncionarios());
+            SetForm(new frmProfessores());
         }
     }
 }

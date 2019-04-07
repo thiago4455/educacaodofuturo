@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace educacaodofuturo
 {
-    public partial class frmHome : Form
+    public partial class frmHomeDiretor : Form
     {
         Panel panel;
-        public frmHome(Panel pnl)
+        public frmHomeDiretor(Panel pnl)
         {
             InitializeComponent();
             panel = pnl;

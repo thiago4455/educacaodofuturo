@@ -80,8 +80,12 @@ namespace educacaodofuturo
             senha.Enabled = true;
             if (func.Id != "")
             {
-                if(func.Cargo == "Diretor")
-                action(new frmMenuDiretor(action, func));
+                if (func.Cargo == "Diretor")
+                    action(new frmMenuDiretor(action, func));
+                else if (func.Cargo == "Coordenador")
+                    action(new frmMenuCoordenador());
+                else
+                    MessageBox.Show("Cargo não definido");
             }
             else
             {

@@ -75,6 +75,12 @@ namespace educacaodofuturo.Resources
             action(collection);
         }
 
+        public async void BuscarPorCargo(Action<QuerySnapshot> action, string collectionName, string cargo)
+        {
+            var collection = await db.Collection(collectionName).WhereEqualTo("cargo",cargo).GetSnapshotAsync();
+            action(collection);
+        }
+
         public async void Cadastrar(Dictionary<string,object> values, Action<bool> action, string collectionString)
         {
             try

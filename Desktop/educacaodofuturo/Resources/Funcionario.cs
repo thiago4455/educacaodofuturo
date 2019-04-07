@@ -26,7 +26,7 @@ namespace educacaodofuturo.Resources
 
         private Action<Funcionario> action;
         private Action<bool> actionResult;
-        Action<List<Funcionario>> actionRetFuncs;
+        Action<List<Funcionario>> actionRetList;
 
         public void Login(Action<Funcionario> action)
         {
@@ -79,6 +79,27 @@ namespace educacaodofuturo.Resources
             new Firebase().CadastrarFuncionario(values, CadastrarResult);
         }
 
+        public void RetProfessores(Action<List<Funcionario>> action)
+        {
+            this.actionRetList = action;
+            new Resources.Firebase().BuscarPorCargo(RetTodosResult, "Funcionarios","Professor");
+        }
+        public void RetProfessoresResult(QuerySnapshot querySnapshot)
+        {
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            foreach (var document in querySnapshot)
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Id = document.Id;
+                funcionario.Nome = document.GetValue<string>("nome");
+                funcionario.Cargo = document.GetValue<string>("cargo");
+                funcionario.Email = document.GetValue<string>("email");
+                funcionario.Telefone = document.GetValue<string>("telefone");
+                funcionarios.Add(funcionario);
+            }
+            actionRetList(funcionarios);
+        }
+
         public void CadastrarResult(bool cadastrado)
         {
             actionResult(cadastrado);
@@ -86,7 +107,7 @@ namespace educacaodofuturo.Resources
 
         public void RetTodos(Action<List<Funcionario>> action)
         {
-            this.actionRetFuncs = action;
+            this.actionRetList = action;
             new Resources.Firebase().BuscarTodos(RetTodosResult, "Funcionarios");
         }
         public void RetTodosResult(QuerySnapshot querySnapshot)
@@ -102,7 +123,7 @@ namespace educacaodofuturo.Resources
                 funcionario.Telefone = document.GetValue<string>("telefone");
                 funcionarios.Add(funcionario);
             }
-            actionRetFuncs(funcionarios);
+            actionRetList(funcionarios);
         }
     }
 }
