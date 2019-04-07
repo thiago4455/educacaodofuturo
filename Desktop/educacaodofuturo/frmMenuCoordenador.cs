@@ -15,6 +15,7 @@ namespace educacaodofuturo
         public frmMenuCoordenador()
         {
             InitializeComponent();
+            SetForm(new frmHomeCoordenador(pnlDireita));
         }
 
         public void SetForm(Form form)
@@ -28,7 +29,7 @@ namespace educacaodofuturo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            
+            SetForm(new frmHomeCoordenador(pnlDireita));
         }
 
         private void btnProfessores_Click(object sender, EventArgs e)

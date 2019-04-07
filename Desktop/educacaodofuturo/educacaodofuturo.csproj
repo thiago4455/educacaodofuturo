@@ -139,6 +139,12 @@
     <Compile Include="frmAdicionarFuncs.Designer.cs">
       <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdicionarProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarProfessores.Designer.cs">
+      <DependentUpon>frmAdicionarProfessores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="frmFuncionarios.Designer.cs">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeCoordenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeCoordenador.Designer.cs">
+      <DependentUpon>frmHomeCoordenador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHomeDiretor.cs">
       <SubType>Form</SubType>
@@ -198,11 +210,17 @@
     <EmbeddedResource Include="frmAdicionarFuncs.resx">
       <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarProfessores.resx">
+      <DependentUpon>frmAdicionarProfessores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionarios.resx">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeCoordenador.resx">
+      <DependentUpon>frmHomeCoordenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHomeDiretor.resx">
       <DependentUpon>frmHomeDiretor.cs</DependentUpon>

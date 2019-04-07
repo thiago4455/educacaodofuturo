@@ -1,6 +1,6 @@
 ﻿namespace educacaodofuturo
 {
-    partial class frmAdicionarFuncs
+    partial class frmAdicionarProfessores
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblLinha
@@ -80,9 +79,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(180, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(182, 25);
             this.lblTitulo.TabIndex = 5;
-            this.lblTitulo.Text = "Adicionar funcionário";
+            this.lblTitulo.Text = "Adicionar Professor";
             // 
             // txtNome
             // 
@@ -93,7 +92,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(709, 20);
             this.txtNome.TabIndex = 8;
-            this.txtNome.Text = "Digite o nome completo do funcionário";
+            this.txtNome.Text = "Digite o nome completo do professor";
             this.txtNome.Enter += new System.EventHandler(this.txtNome_Enter);
             this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
@@ -106,7 +105,7 @@
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(342, 20);
             this.mskCpf.TabIndex = 9;
-            this.mskCpf.Text = "Digite o cpf do funcionário";
+            this.mskCpf.Text = "Digite o cpf do professor";
             this.mskCpf.Enter += new System.EventHandler(this.mskCpf_Enter);
             this.mskCpf.Leave += new System.EventHandler(this.mskCpf_Leave);
             // 
@@ -119,7 +118,7 @@
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(342, 20);
             this.mskTelefone.TabIndex = 10;
-            this.mskTelefone.Text = "Digite o telefone do funcionário";
+            this.mskTelefone.Text = "Digite o telefone do professor";
             this.mskTelefone.Enter += new System.EventHandler(this.mskTelefone_Enter);
             this.mskTelefone.Leave += new System.EventHandler(this.mskTelefone_Leave);
             // 
@@ -132,7 +131,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(237, 20);
             this.txtEmail.TabIndex = 11;
-            this.txtEmail.Text = "Digite o email do funcionário";
+            this.txtEmail.Text = "Digite o email do professor";
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
@@ -145,7 +144,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(233, 20);
             this.txtSenha.TabIndex = 13;
-            this.txtSenha.Text = "Digite a senha do funcionário";
+            this.txtSenha.Text = "Digite a senha do professor";
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
@@ -158,7 +157,7 @@
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(581, 20);
             this.txtRua.TabIndex = 14;
-            this.txtRua.Text = "Digite a rua do funcionário";
+            this.txtRua.Text = "Digite a rua do professor";
             this.txtRua.Enter += new System.EventHandler(this.txtRua_Enter);
             this.txtRua.Leave += new System.EventHandler(this.txtRua_Leave);
             // 
@@ -171,7 +170,7 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(323, 20);
             this.txtBairro.TabIndex = 15;
-            this.txtBairro.Text = "Digite o bairro do funcionário";
+            this.txtBairro.Text = "Digite o bairro do professor";
             this.txtBairro.Enter += new System.EventHandler(this.txtBairro_Enter);
             this.txtBairro.Leave += new System.EventHandler(this.txtBairro_Leave);
             // 
@@ -184,7 +183,7 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(342, 20);
             this.txtCidade.TabIndex = 16;
-            this.txtCidade.Text = "Digite a cidade do funcionário";
+            this.txtCidade.Text = "Digite a cidade do professor";
             this.txtCidade.Enter += new System.EventHandler(this.txtCidade_Enter);
             this.txtCidade.Leave += new System.EventHandler(this.txtCidade_Leave);
             // 
@@ -236,7 +235,7 @@
             "SP",
             "SE",
             "TO"});
-            this.cboEstado.Location = new System.Drawing.Point(398, 245);
+            this.cboEstado.Location = new System.Drawing.Point(12, 245);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(143, 24);
             this.cboEstado.TabIndex = 18;
@@ -252,7 +251,7 @@
             "Masculino",
             "Feminino",
             "Prefiro não identificar"});
-            this.cboSexo.Location = new System.Drawing.Point(573, 245);
+            this.cboSexo.Location = new System.Drawing.Point(215, 245);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(148, 24);
             this.cboSexo.TabIndex = 20;
@@ -266,7 +265,7 @@
             this.mskCep.Name = "mskCep";
             this.mskCep.Size = new System.Drawing.Size(213, 20);
             this.mskCep.TabIndex = 21;
-            this.mskCep.Text = "Digite o cep do funcionário";
+            this.mskCep.Text = "Digite o cep do professor";
             this.mskCep.Enter += new System.EventHandler(this.mskCep_Enter);
             this.mskCep.Leave += new System.EventHandler(this.mskCep_Leave);
             // 
@@ -302,9 +301,9 @@
             this.btnAdicionarFuncionario.Name = "btnAdicionarFuncionario";
             this.btnAdicionarFuncionario.Size = new System.Drawing.Size(176, 31);
             this.btnAdicionarFuncionario.TabIndex = 23;
-            this.btnAdicionarFuncionario.Text = "Adicionar Funcionário";
+            this.btnAdicionarFuncionario.Text = "Adicionar Professor";
             this.btnAdicionarFuncionario.UseVisualStyleBackColor = false;
-            this.btnAdicionarFuncionario.Click += new System.EventHandler(this.btnAdicionarFuncionario_Click);
+            this.btnAdicionarFuncionario.Click += new System.EventHandler(this.btnAdicionarProfessor_Click);
             // 
             // label3
             // 
@@ -339,27 +338,7 @@
             this.label4.Size = new System.Drawing.Size(806, 2);
             this.label4.TabIndex = 27;
             // 
-            // cboCargo
-            // 
-            this.cboCargo.BackColor = System.Drawing.SystemColors.Control;
-            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Items.AddRange(new object[] {
-            "Selecione o cargo",
-            "Diretor(a)",
-            "Pedagogo(a)",
-            "Coordenador(a)",
-            "Professor(a)",
-            "Secretário(a)",
-            "Bibliotecário(a)",
-            "Auxiliar"});
-            this.cboCargo.Location = new System.Drawing.Point(12, 245);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(351, 24);
-            this.cboCargo.TabIndex = 19;
-            // 
-            // frmAdicionarFuncs
+            // frmAdicionarProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -373,7 +352,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.mskCep);
             this.Controls.Add(this.cboSexo);
-            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtCidade);
@@ -388,7 +366,7 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAdicionarFuncs";
+            this.Name = "frmAdicionarProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAdicionarFuncs";
             this.ResumeLayout(false);
@@ -419,6 +397,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboCargo;
     }
 }

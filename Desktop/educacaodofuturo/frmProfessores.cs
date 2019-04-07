@@ -40,5 +40,11 @@ namespace educacaodofuturo
             dgvProfessores.Columns["email"].HeaderText = "Email";
             dgvProfessores.Columns["telefone"].HeaderText = "Telefone";
         }
+
+        private void btnAdicionarFunc_Click(object sender, EventArgs e)
+        {
+            new frmAdicionarProfessores().ShowDialog();
+            new Resources.Funcionario().RetProfessores(ResultRet);
+        }
     }
 }
