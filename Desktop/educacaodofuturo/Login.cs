@@ -84,6 +84,8 @@ namespace educacaodofuturo
                     action(new frmMenuDiretor(action, func));
                 else if (func.Cargo == "Coordenador")
                     action(new frmMenuCoordenador());
+                else if (func.Cargo == "Secretário")
+                    action(new frmMenuSecretario());
                 else
                     MessageBox.Show("Cargo não definido");
             }

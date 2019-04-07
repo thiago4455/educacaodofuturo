@@ -145,6 +145,12 @@
     <Compile Include="frmAdicionarProfessores.Designer.cs">
       <DependentUpon>frmAdicionarProfessores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlunos.Designer.cs">
+      <DependentUpon>frmAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     <Compile Include="frmHomeDiretor.Designer.cs">
       <DependentUpon>frmHomeDiretor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHomeSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeSecretario.Designer.cs">
+      <DependentUpon>frmHomeSecretario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuCoordenador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,12 @@
     </Compile>
     <Compile Include="frmMenuDiretor.Designer.cs">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSecretario.Designer.cs">
+      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProfessores.cs">
       <SubType>Form</SubType>
@@ -213,6 +231,9 @@
     <EmbeddedResource Include="frmAdicionarProfessores.resx">
       <DependentUpon>frmAdicionarProfessores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAlunos.resx">
+      <DependentUpon>frmAlunos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,11 +246,17 @@
     <EmbeddedResource Include="frmHomeDiretor.resx">
       <DependentUpon>frmHomeDiretor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeSecretario.resx">
+      <DependentUpon>frmHomeSecretario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuCoordenador.resx">
       <DependentUpon>frmMenuCoordenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuDiretor.resx">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuSecretario.resx">
+      <DependentUpon>frmMenuSecretario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfessores.resx">
       <DependentUpon>frmProfessores.cs</DependentUpon>

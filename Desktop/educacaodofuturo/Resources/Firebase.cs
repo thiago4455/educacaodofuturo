@@ -67,6 +67,8 @@ namespace educacaodofuturo.Resources
             quantidades.Add("Auxiliares", collection.Count());
             collection = await db.Collection("Funcionarios").WhereEqualTo("cargo", "Professor").GetSnapshotAsync();
             quantidades.Add("Professores", collection.Count());
+            collection = await db.Collection("Alunos").GetSnapshotAsync();
+            quantidades.Add("Alunos", collection.Count());
             action(quantidades);
 
         }
