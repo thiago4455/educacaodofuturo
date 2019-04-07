@@ -27,14 +27,15 @@ namespace educacaodofuturo
             form.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void TrocarForm(object sender, EventArgs e)
         {
-            SetForm(new frmHomeCoordenador(pnlDireita));
-        }
-
-        private void btnProfessores_Click(object sender, EventArgs e)
-        {
-            SetForm(new frmProfessores());
+            if (sender.Equals(btnHome))
+            {
+                SetForm(new frmHomeCoordenador(pnlDireita));
+            } else if (sender.Equals(btnProfessores))
+            {
+                SetForm(new frmProfessores());
+            }
         }
     }
 }

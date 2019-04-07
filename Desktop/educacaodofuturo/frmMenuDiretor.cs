@@ -33,19 +33,20 @@ namespace educacaodofuturo
             form.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void TrocarForm(object sender, EventArgs e)
         {
-            SetForm(new frmHomeDiretor(pnlDireita));
-        }
-
-        private void btnCursos_Click(object sender, EventArgs e)
-        {
-            SetForm(new frmCursos());
-        }
-
-        private void btnFuncionarios_Click(object sender, EventArgs e)
-        {
-            SetForm(new frmFuncionarios());
+            if (sender.Equals(btnHome))
+            {
+                SetForm(new frmHomeCoordenador(pnlDireita));
+            }
+            else if (sender.Equals(btnCursos))
+            {
+                SetForm(new frmCursos());
+            }
+            else if (sender.Equals(btnFuncionarios))
+            {
+                SetForm(new frmFuncionarios());
+            }
         }
     }
 }

@@ -61,7 +61,7 @@
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.TrocarForm);
             // 
             // lblTitulo
             // 
@@ -104,6 +104,7 @@
             this.btnAlunos.TabIndex = 8;
             this.btnAlunos.Text = "Alunos";
             this.btnAlunos.UseVisualStyleBackColor = false;
+            this.btnAlunos.Click += new System.EventHandler(this.TrocarForm);
             // 
             // pictureBox2
             // 

@@ -74,7 +74,7 @@
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.TrocarForm);
             // 
             // pictureBox2
             // 
@@ -114,7 +114,7 @@
             this.btnProfessores.TabIndex = 8;
             this.btnProfessores.Text = "Professores";
             this.btnProfessores.UseVisualStyleBackColor = false;
-            this.btnProfessores.Click += new System.EventHandler(this.btnProfessores_Click);
+            this.btnProfessores.Click += new System.EventHandler(this.TrocarForm);
             // 
             // frmMenuCoordenador
             // 

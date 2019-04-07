@@ -17,9 +17,16 @@ namespace educacaodofuturo
             InitializeComponent();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void TrocarForm(object sender, EventArgs e)
         {
-            SetForm(new frmHomeSecretario(pnlDireita));
+            if (sender.Equals(btnHome))
+            {
+                SetForm(new frmHomeSecretario(pnlDireita));
+            }
+            else if (sender.Equals(btnAlunos))
+            {
+                SetForm(new frmAlunos());
+            }
         }
 
         private void SetForm(Form form)
