@@ -56,7 +56,7 @@ namespace educacaodofuturo
 
         private void mskCpf_Leave(object sender, EventArgs e)
         {
-            if (mskCpf.Text.Replace(" ","").Replace(".","").Replace("-","") == "")
+            if (mskCpf.Text.Replace(" ", "").Length < 14)
             {
                 mskCpf.Mask = "";
                 mskCpf.Text = "Digite o cpf do funcionário";
@@ -76,7 +76,7 @@ namespace educacaodofuturo
 
         private void mskTelefone_Leave(object sender, EventArgs e)
         {
-            if (mskTelefone.Text.Replace(" ","").Replace("(","").Replace(")","").Replace("-","") == "")
+            if (mskTelefone.Text.Replace(" ", "").Length < 14)
             {
                 mskTelefone.Mask = "";
                 mskTelefone.Text = "Digite o telefone do funcionário";
@@ -132,7 +132,7 @@ namespace educacaodofuturo
 
         private void mskCep_Leave(object sender, EventArgs e)
         {
-            if (mskCep.Text.Replace(" ","").Replace("-","") == "")
+            if (mskCep.Text.Replace(" ", "").Length < 9)
             {
                 mskCep.Mask = "";
                 mskCep.Text = "Digite o cep do funcionário";
@@ -238,6 +238,9 @@ namespace educacaodofuturo
             cidadePlaceholder = true;
             txtBairro.Text = "Digite o nome completo do funcionário";
             bairroPlaceholder = true;
+            cboEstado.SelectedIndex = 0;
+            cboSexo.SelectedIndex = 0;
+            cboCargo.SelectedIndex = 0;
         }
 
         private void btnAdicionarFuncionario_Click(object sender, EventArgs e)
