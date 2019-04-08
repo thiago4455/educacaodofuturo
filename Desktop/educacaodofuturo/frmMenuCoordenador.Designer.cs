@@ -34,6 +34,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.btnProfessores = new System.Windows.Forms.Button();
+            this.btnPlanosCursos = new System.Windows.Forms.Button();
+            this.btnPlanosAulas = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlEsquerda.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +92,9 @@
             // pnlEsquerda
             // 
             this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.pnlEsquerda.Controls.Add(this.btnRelatorio);
+            this.pnlEsquerda.Controls.Add(this.btnPlanosAulas);
+            this.pnlEsquerda.Controls.Add(this.btnPlanosCursos);
             this.pnlEsquerda.Controls.Add(this.btnProfessores);
             this.pnlEsquerda.Controls.Add(this.pictureBox2);
             this.pnlEsquerda.Controls.Add(this.btnHome);
@@ -116,6 +122,54 @@
             this.btnProfessores.UseVisualStyleBackColor = false;
             this.btnProfessores.Click += new System.EventHandler(this.TrocarForm);
             // 
+            // btnPlanosCursos
+            // 
+            this.btnPlanosCursos.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlanosCursos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPlanosCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPlanosCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPlanosCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanosCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPlanosCursos.ForeColor = System.Drawing.Color.White;
+            this.btnPlanosCursos.Location = new System.Drawing.Point(0, 147);
+            this.btnPlanosCursos.Name = "btnPlanosCursos";
+            this.btnPlanosCursos.Size = new System.Drawing.Size(168, 40);
+            this.btnPlanosCursos.TabIndex = 9;
+            this.btnPlanosCursos.Text = "Planos de Cursos";
+            this.btnPlanosCursos.UseVisualStyleBackColor = false;
+            // 
+            // btnPlanosAulas
+            // 
+            this.btnPlanosAulas.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlanosAulas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPlanosAulas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPlanosAulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPlanosAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanosAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPlanosAulas.ForeColor = System.Drawing.Color.White;
+            this.btnPlanosAulas.Location = new System.Drawing.Point(0, 193);
+            this.btnPlanosAulas.Name = "btnPlanosAulas";
+            this.btnPlanosAulas.Size = new System.Drawing.Size(168, 40);
+            this.btnPlanosAulas.TabIndex = 10;
+            this.btnPlanosAulas.Text = "Planos de Aulas";
+            this.btnPlanosAulas.UseVisualStyleBackColor = false;
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnRelatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 239);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
+            this.btnRelatorio.TabIndex = 11;
+            this.btnRelatorio.Text = "Relatórios";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            // 
             // frmMenuCoordenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,5 +195,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlEsquerda;
         private System.Windows.Forms.Button btnProfessores;
+        private System.Windows.Forms.Button btnPlanosAulas;
+        private System.Windows.Forms.Button btnPlanosCursos;
+        private System.Windows.Forms.Button btnRelatorio;
     }
 }

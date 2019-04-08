@@ -20,15 +20,34 @@ namespace educacaodofuturo
             new Resources.Firebase().BuscarQuant(ResultQuantidades);
         }
 
-        private void btnProfessores_Click(object sender, EventArgs e)
+        private void SetForm(Form form)
         {
             panel.Controls.Clear();
-            frmProfessores frmProfessores = new frmProfessores();
-            frmProfessores.TopLevel = false;
-            frmProfessores.AutoScroll = false;
-            panel.Controls.Add(frmProfessores);
-            frmProfessores.Show();
+            form.TopLevel = false;
+            form.AutoScroll = false;
+            panel.Controls.Add(form);
+            form.Show();
             this.Close();
+        }
+
+        private void TrocarCursos(object sender, EventArgs e)
+        {
+            if (sender.Equals(btnProfessores))
+            {
+                SetForm(new frmProfessores());
+            }
+            else if (sender.Equals(btnConteudoCurso))
+            {
+
+            }
+            else if (sender.Equals(btnPlanoCurso))
+            {
+
+            }
+            else if (sender.Equals(btnPlanosAula))
+            {
+
+            }
         }
 
         public void ResultQuantidades(Dictionary<string, int> quantidades)

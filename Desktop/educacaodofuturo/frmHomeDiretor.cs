@@ -37,5 +37,16 @@ namespace educacaodofuturo
             frmFuncionarios.Show();
             this.Close();
         }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            frmCursos frmCursos = new frmCursos();
+            frmCursos.TopLevel = false;
+            frmCursos.AutoScroll = false;
+            panel.Controls.Add(frmCursos);
+            frmCursos.Show();
+            this.Close();
+        }
     }
 }

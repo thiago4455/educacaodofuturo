@@ -32,9 +32,22 @@ namespace educacaodofuturo
             if (sender.Equals(btnHome))
             {
                 SetForm(new frmHomeCoordenador(pnlDireita));
-            } else if (sender.Equals(btnProfessores))
+            }
+            else if (sender.Equals(btnProfessores))
             {
                 SetForm(new frmProfessores());
+            }
+            else if (sender.Equals(btnPlanosCursos))
+            {
+
+            }
+            else if (sender.Equals(btnPlanosAulas))
+            {
+
+            }
+            else if (sender.Equals(btnRelatorio))
+            {
+
             }
         }
     }

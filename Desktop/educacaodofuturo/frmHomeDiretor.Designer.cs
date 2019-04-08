@@ -100,7 +100,7 @@
             this.btnCursos.Text = "Ver Detalhes";
             this.btnCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCursos.UseVisualStyleBackColor = false;
-            this.btnCursos.Click += new System.EventHandler(this.VerFuncionarios);
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // lblQuantCursos
             // 
@@ -432,7 +432,7 @@
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
-            // frmHome
+            // frmHomeDiretor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -444,7 +444,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCursos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmHome";
+            this.Name = "frmHomeDiretor";
             this.Text = "frmHome";
             this.pnlCursos.ResumeLayout(false);
             this.pnlCursos.PerformLayout();

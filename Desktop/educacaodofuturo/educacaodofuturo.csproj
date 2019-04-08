@@ -157,6 +157,12 @@
     <Compile Include="frmCursos.Designer.cs">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFrequenciaFuncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFrequenciaFuncs.Designer.cs">
+      <DependentUpon>frmFrequenciaFuncs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFrequenciaFuncs.resx">
+      <DependentUpon>frmFrequenciaFuncs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionarios.resx">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
@@ -323,6 +332,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\auxiliar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14173-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" />

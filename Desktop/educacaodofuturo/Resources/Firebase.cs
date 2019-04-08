@@ -33,6 +33,13 @@ namespace educacaodofuturo.Resources
             }
         }
 
+        public async void RetornarFrequencia(string collectionString, string campo, string valorCampo, Action<QuerySnapshot> action)
+        {
+            var collection = await db.Collection(collectionString).WhereEqualTo(campo, valorCampo).GetSnapshotAsync();
+            action(collection);
+            
+        }
+
         public async void CadastrarFuncionario(Dictionary<string, object> dados, Action<bool> action)
         {
             try
@@ -70,7 +77,6 @@ namespace educacaodofuturo.Resources
             collection = await db.Collection("Alunos").GetSnapshotAsync();
             quantidades.Add("Alunos", collection.Count());
             action(quantidades);
-
         }
 
         public async void BuscarTodos(Action<QuerySnapshot> action, string collectionName)

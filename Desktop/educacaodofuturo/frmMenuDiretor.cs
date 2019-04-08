@@ -37,7 +37,7 @@ namespace educacaodofuturo
         {
             if (sender.Equals(btnHome))
             {
-                SetForm(new frmHomeCoordenador(pnlDireita));
+                SetForm(new frmHomeDiretor(pnlDireita));
             }
             else if (sender.Equals(btnCursos))
             {
@@ -46,6 +46,10 @@ namespace educacaodofuturo
             else if (sender.Equals(btnFuncionarios))
             {
                 SetForm(new frmFuncionarios());
+            }
+            else if (sender.Equals(btnRelatorio))
+            {
+                SetForm(new frmFrequenciaFuncs());
             }
         }
     }

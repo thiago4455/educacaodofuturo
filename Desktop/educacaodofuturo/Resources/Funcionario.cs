@@ -23,6 +23,10 @@ namespace educacaodofuturo.Resources
         public string Sexo { get; set; }
         public string Telefone { get; set; }
         public string Id { get; set; }
+        public string HorarioEntrada { get; set; }
+        public string HorarioSaida { get; set; }
+        public string SaidaIntervalo { get; set; }
+        public string VoltaIntervalo { get; set; }
 
         private Action<Funcionario> action;
         private Action<bool> actionResult;
@@ -70,12 +74,12 @@ namespace educacaodofuturo.Resources
             values.Add("cep", Cep);
             values.Add("bairro", Bairro);
             values.Add("cidade", Cidade);
-            values.Add("cpf", Cep);
-            values.Add("estado", Cep);
-            values.Add("numero", Cep);
-            values.Add("rua", Cep);
-            values.Add("sexo", Cep);
-            values.Add("telefone", Cep);
+            values.Add("cpf", Cpf);
+            values.Add("estado", Estado);
+            values.Add("numero", Numero);
+            values.Add("rua", Rua);
+            values.Add("sexo", Sexo);
+            values.Add("telefone", Telefone);
             new Firebase().CadastrarFuncionario(values, CadastrarResult);
         }
 
@@ -121,6 +125,27 @@ namespace educacaodofuturo.Resources
                 funcionario.Cargo = document.GetValue<string>("cargo");
                 funcionario.Email = document.GetValue<string>("email");
                 funcionario.Telefone = document.GetValue<string>("telefone");
+                funcionarios.Add(funcionario);
+            }
+            actionRetList(funcionarios);
+        }
+
+        public void RetFreqData(string campo, string campoValor, Action<List<Funcionario>> action)
+        {
+            actionRetList = action;
+            new Resources.Firebase().RetornarFrequencia("FrequenciaFuncs", campo, campoValor,RetFreqDataResult);
+        }
+        public void RetFreqDataResult(QuerySnapshot querySnapshot)
+        {
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            foreach (var document in querySnapshot)
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Cpf = document.GetValue<string>("cpf");
+                funcionario.HorarioEntrada = document.GetValue<string>("horarioEntrada");
+                funcionario.HorarioSaida = document.GetValue<string>("horarioSaida");
+                funcionario.SaidaIntervalo = document.GetValue<string>("saidaIntervalo");
+                funcionario.VoltaIntervalo = document.GetValue<string>("voltaIntervalo");
                 funcionarios.Add(funcionario);
             }
             actionRetList(funcionarios);
