@@ -49,19 +49,19 @@ function NavLateral(id) {
 function Page(id) {
 
     if (id == 'nav-home') {
-        const caminho = 'diretor/home.html'
+        const caminho = 'coordenador/home.html'
         PageLoad(caminho)
     }
     else if (id == 'nav-cursos') {
-        const caminho = 'diretor/cursos.html'
+        const caminho = 'coordenador/professores.html'
         PageLoad(caminho)
     }
     else if (id == 'nav-func') {
-        const caminho = 'diretor/funcionarios.html'
+        const caminho = 'coordenador/funcionarios.html'
         PageLoad(caminho)
     }
     else if (id == 'nav-relatorio') {
-        const caminho = 'diretor/relatorios.html'
+        const caminho = 'coordenador/relatorios.html'
         PageLoad(caminho)
     }
 }
