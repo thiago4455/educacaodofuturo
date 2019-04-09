@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão Escolar</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+
+    <!-- Fontes -->
+    <link rel="stylesheet" href="../../fonts/fontes.css">
+
+    <link rel="stylesheet" href="css/professores.css">
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div class="" id="loading">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1>Carregando...</h1>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-addCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Professor(a)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-12 col-12">
+                                <input id="modal-nome" type="text" class=" modal-input"
+                                    placeholder="Digite o nome completo do Professor(a)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 col-12">
+                                <input id="modal-cpf" type="text" class="modal-input"
+                                    placeholder="Digite o cpf do Professor(a)">
+                            </div>
+                            <div class="form-group col-md-6 col-12">
+                                <input id="modal-telefone" type="text" class="modal-input"
+                                    placeholder="Digite o telefone do Professor(a)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-5 col-12">
+                                <input id="modal-email" type="email" class="modal-input"
+                                    placeholder="Digite o email do Professor(a)">
+                            </div>
+                            <div class="form-group col-md-4 col-12">
+                                <input id="modal-senha" type="text" class="modal-input"
+                                    placeholder="Digite a senha do Professor(a)">
+                            </div>
+                            <div class="form-group col-md-3 col-12">
+                                <input id="modal-cep" type="text" class="modal-input"
+                                    placeholder="Digite o cep do Professor(a)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 col-12">
+                                <input type="text" class="modal-input" id="modal-rua"
+                                    placeholder="Digite a rua do Professor(a)">
+                            </div>
+                            <div class="form-group col-md-6 col-12">
+                                <input type="text" class="modal-input" id="modal-bairro"
+                                    placeholder="Digite o bairro do Professor(a)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 col-12">
+                                <input type="text" class="modal-input" id="modal-cidade"
+                                    placeholder="Digite a cidade do Professor(a)">
+                            </div>
+                            <div class="form-group col-md-4 col-12">
+                                <select id="modal-estado" class="modal-input">
+                                    <option selected class="modal-input">Selecione...</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espirito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 col-12">
+                                <input type="text" class="modal-input" id="modal-numero" placeholder="Número">
+                            </div>
+                            <div class="form-group col-md-8 col-12">
+                                <select id="modal-area" class="modal-input">
+                                    <option selected class="modal-input">Área...</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4 col-12">
+                                <select id="modal-sexo" class="modal-input">
+                                    <option selected class="modal-input">Sexo...</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Prefiro não identificar</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="modal-limpar">Limpar Formulário</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal-sair">Sair</button>
+                    <button type="button" class="btn btn-success" id="modal-adicionar">Adicionar Professor(a)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top">
+        <h1 id="title">Professores</h1>
+        <div class="order">
+            <h1 id="order-title">Ordernar por:</h1>
+            <div id="order-nome" class="order-item order-item-active">
+                <p>Nome</p>
+            </div>
+            <div id="order-quant" class="order-item">
+                <p>Quantidade</p>
+            </div>
+            <div id="order-preco" class="order-item">
+                <p>Preço</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bar-options">
+        <div class="btn" id="btn-adicionar" data-toggle="modal" data-target="#modal-addCliente">Adicionar Professor(a)</div>
+    </div>
+
+    <div class="main">
+        <table class="table table-bordered" id="table-prod">
+            <thead>
+                <tr>
+                    <th scope="col">Nome do Professor(a)</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="table-info">
+
+            </tbody>
+        </table>
+    </div> <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script type="text/javascript" src="../../js/firebase.js">
+    </script>
+
+    <!-- My Js -->
+
+    <script type="text/javascript" src="../../jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../jquery/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/professores.js"></script>
+    <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

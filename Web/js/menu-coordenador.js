@@ -50,7 +50,7 @@ function Page(id) {
         const caminho = 'coordenador/home.html'
         PageLoad(caminho)
     }
-    else if (id == 'nav-cursos') {
+    else if (id == 'nav-prof') {
         const caminho = 'coordenador/professores.html'
         PageLoad(caminho)
     }
