@@ -28,7 +28,6 @@ async function VerificaCargo(email) {
             else if (cargo == 'coordenador') {
                 if (!window.location.href.includes('home/menu-coordenador.html')) {
                     window.location.href = '../home/menu-coordenador.html'
-                    alert('oi')
                 }
             }
 

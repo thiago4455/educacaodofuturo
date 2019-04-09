@@ -36,9 +36,7 @@ $(window).on('load', function () {
 })
 
 function Deslogar() {
-    firebase.auth().signOut().then(function () {
-    });
-    window.location.href = '../index'
+    firebase.auth().signOut()
 }
 
 function NavLateral(id) {
