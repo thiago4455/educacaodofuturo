@@ -12,9 +12,18 @@ namespace educacaodofuturo
 {
     public partial class frmMenuSecretario : Form
     {
-        public frmMenuSecretario()
+        Resources.Funcionario funcionarioLogado;
+        Action<Form> action;
+        public frmMenuSecretario(Action<Form> act, Resources.Funcionario funcionario)
         {
             InitializeComponent();
+            action = act;
+            funcionarioLogado = funcionario;
+            if (funcionarioLogado.Sexo == "Feminino")
+                ptbFoto.BackgroundImage = Properties.Resources.userFemale;
+            else
+                ptbFoto.BackgroundImage = Properties.Resources.userMale;
+            SetForm(new frmHomeSecretario(pnlDireita));
         }
 
         private void TrocarForm(object sender, EventArgs e)
@@ -36,6 +45,11 @@ namespace educacaodofuturo
             form.AutoScroll = false;
             pnlDireita.Controls.Add(form);
             form.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            action(new Login(action));
         }
     }
 }

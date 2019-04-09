@@ -31,14 +31,17 @@
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
-            this.btnProfessores = new System.Windows.Forms.Button();
-            this.btnPlanosCursos = new System.Windows.Forms.Button();
-            this.btnPlanosAulas = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btnPlanosAulas = new System.Windows.Forms.Button();
+            this.btnPlanosCursos = new System.Windows.Forms.Button();
+            this.btnProfessores = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDireita
@@ -79,19 +82,11 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.TrocarForm);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // pnlEsquerda
             // 
             this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.pnlEsquerda.Controls.Add(this.btnLogout);
+            this.pnlEsquerda.Controls.Add(this.ptbFoto);
             this.pnlEsquerda.Controls.Add(this.btnRelatorio);
             this.pnlEsquerda.Controls.Add(this.btnPlanosAulas);
             this.pnlEsquerda.Controls.Add(this.btnPlanosCursos);
@@ -104,6 +99,54 @@
             this.pnlEsquerda.Name = "pnlEsquerda";
             this.pnlEsquerda.Size = new System.Drawing.Size(168, 500);
             this.pnlEsquerda.TabIndex = 2;
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnRelatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 239);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
+            this.btnRelatorio.TabIndex = 11;
+            this.btnRelatorio.Text = "Relatórios";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            // 
+            // btnPlanosAulas
+            // 
+            this.btnPlanosAulas.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlanosAulas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPlanosAulas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPlanosAulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPlanosAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanosAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPlanosAulas.ForeColor = System.Drawing.Color.White;
+            this.btnPlanosAulas.Location = new System.Drawing.Point(0, 193);
+            this.btnPlanosAulas.Name = "btnPlanosAulas";
+            this.btnPlanosAulas.Size = new System.Drawing.Size(168, 40);
+            this.btnPlanosAulas.TabIndex = 10;
+            this.btnPlanosAulas.Text = "Planos de Aulas";
+            this.btnPlanosAulas.UseVisualStyleBackColor = false;
+            // 
+            // btnPlanosCursos
+            // 
+            this.btnPlanosCursos.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlanosCursos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPlanosCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPlanosCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPlanosCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanosCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPlanosCursos.ForeColor = System.Drawing.Color.White;
+            this.btnPlanosCursos.Location = new System.Drawing.Point(0, 147);
+            this.btnPlanosCursos.Name = "btnPlanosCursos";
+            this.btnPlanosCursos.Size = new System.Drawing.Size(168, 40);
+            this.btnPlanosCursos.TabIndex = 9;
+            this.btnPlanosCursos.Text = "Planos de Cursos";
+            this.btnPlanosCursos.UseVisualStyleBackColor = false;
             // 
             // btnProfessores
             // 
@@ -122,53 +165,40 @@
             this.btnProfessores.UseVisualStyleBackColor = false;
             this.btnProfessores.Click += new System.EventHandler(this.TrocarForm);
             // 
-            // btnPlanosCursos
+            // btnLogout
             // 
-            this.btnPlanosCursos.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlanosCursos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnPlanosCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
-            this.btnPlanosCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
-            this.btnPlanosCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanosCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnPlanosCursos.ForeColor = System.Drawing.Color.White;
-            this.btnPlanosCursos.Location = new System.Drawing.Point(0, 147);
-            this.btnPlanosCursos.Name = "btnPlanosCursos";
-            this.btnPlanosCursos.Size = new System.Drawing.Size(168, 40);
-            this.btnPlanosCursos.TabIndex = 9;
-            this.btnPlanosCursos.Text = "Planos de Cursos";
-            this.btnPlanosCursos.UseVisualStyleBackColor = false;
+            this.btnLogout.BackgroundImage = global::educacaodofuturo.Properties.Resources.logout;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(127, 459);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(38, 38);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnPlanosAulas
+            // ptbFoto
             // 
-            this.btnPlanosAulas.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlanosAulas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnPlanosAulas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
-            this.btnPlanosAulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
-            this.btnPlanosAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanosAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnPlanosAulas.ForeColor = System.Drawing.Color.White;
-            this.btnPlanosAulas.Location = new System.Drawing.Point(0, 193);
-            this.btnPlanosAulas.Name = "btnPlanosAulas";
-            this.btnPlanosAulas.Size = new System.Drawing.Size(168, 40);
-            this.btnPlanosAulas.TabIndex = 10;
-            this.btnPlanosAulas.Text = "Planos de Aulas";
-            this.btnPlanosAulas.UseVisualStyleBackColor = false;
+            this.ptbFoto.BackgroundImage = global::educacaodofuturo.Properties.Resources.userMale;
+            this.ptbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbFoto.Location = new System.Drawing.Point(3, 459);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(38, 38);
+            this.ptbFoto.TabIndex = 12;
+            this.ptbFoto.TabStop = false;
             // 
-            // btnRelatorio
+            // pictureBox2
             // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btnRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnRelatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
-            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(0, 239);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
-            this.btnRelatorio.TabIndex = 11;
-            this.btnRelatorio.Text = "Relatórios";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // frmMenuCoordenador
             // 
@@ -180,9 +210,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuCoordenador";
             this.Text = "frmMenuCoordenador";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlEsquerda.ResumeLayout(false);
             this.pnlEsquerda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +229,7 @@
         private System.Windows.Forms.Button btnPlanosAulas;
         private System.Windows.Forms.Button btnPlanosCursos;
         private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.PictureBox ptbFoto;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

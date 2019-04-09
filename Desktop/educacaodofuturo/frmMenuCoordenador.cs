@@ -12,9 +12,17 @@ namespace educacaodofuturo
 {
     public partial class frmMenuCoordenador : Form
     {
-        public frmMenuCoordenador()
+        Action<Form> action;
+        Resources.Funcionario funcionarioLogado;
+        public frmMenuCoordenador(Action<Form> act, Resources.Funcionario funcionario)
         {
             InitializeComponent();
+            action = act;
+            funcionarioLogado = funcionario;
+            if(funcionarioLogado.Sexo == "Feminino")
+                ptbFoto.BackgroundImage = Properties.Resources.userFemale;
+            else
+                ptbFoto.BackgroundImage = Properties.Resources.userMale;
             SetForm(new frmHomeCoordenador(pnlDireita));
         }
 
@@ -49,6 +57,11 @@ namespace educacaodofuturo
             {
 
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            action(new Login(action));
         }
     }
 }

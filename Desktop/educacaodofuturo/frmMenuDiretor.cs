@@ -13,15 +13,17 @@ namespace educacaodofuturo
     public partial class frmMenuDiretor : Form
     {
         Action<Form> action;
-        Resources.Funcionario funcionario;
-
-        public frmMenuDiretor(Action<Form> act, Resources.Funcionario func)
+        Resources.Funcionario funcionarioLogado;
+        public frmMenuDiretor(Action<Form> act, Resources.Funcionario funcionario)
         {
             InitializeComponent();
             action = act;
-            funcionario = func;
+            funcionarioLogado = funcionario;
+            if (funcionarioLogado.Sexo == "Feminino")
+                ptbFoto.BackgroundImage = Properties.Resources.userFemale;
+            else
+                ptbFoto.BackgroundImage = Properties.Resources.userMale;
             SetForm(new frmHomeDiretor(pnlDireita));
-
         }
 
         public void SetForm(Form form)
@@ -51,6 +53,11 @@ namespace educacaodofuturo
             {
                 SetForm(new frmFrequenciaFuncs());
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            action(new Login(action));
         }
     }
 }

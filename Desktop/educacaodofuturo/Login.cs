@@ -81,17 +81,26 @@ namespace educacaodofuturo
             if (func.Id != "")
             {
                 if (func.Cargo == "Diretor")
+                {
                     action(new frmMenuDiretor(action, func));
+                    this.Close();
+                }
                 else if (func.Cargo == "Coordenador")
-                    action(new frmMenuCoordenador());
+                {
+                    action(new frmMenuCoordenador(action, func));
+                    this.Close();
+                }
                 else if (func.Cargo == "Secretário")
-                    action(new frmMenuSecretario());
+                {
+                    action(new frmMenuSecretario(action, func));
+                    this.Close();
+                }
                 else
                     MessageBox.Show("Cargo não definido");
             }
             else
             {
-                MessageBox.Show("Email e/ou senha incorretos!","Erro");
+                MessageBox.Show("Email e/ou senha incorretos!", "Erro");
             }
         }
 

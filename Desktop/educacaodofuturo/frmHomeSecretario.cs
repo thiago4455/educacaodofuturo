@@ -25,7 +25,7 @@ namespace educacaodofuturo
             lblQuantAlunos.Text = quantidades["Alunos"].ToString();
         }
 
-
+        
         public void VerDetalhes(object sender, EventArgs e)
         {
             if (sender.Equals(btnAlunos))

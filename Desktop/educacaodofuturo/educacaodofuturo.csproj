@@ -336,6 +336,15 @@
   <ItemGroup>
     <None Include="Resources\14173-200.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userFemale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

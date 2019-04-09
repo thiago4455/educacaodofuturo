@@ -29,20 +29,25 @@
         private void InitializeComponent()
         {
             this.pnlEsquerda = new System.Windows.Forms.Panel();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlDireita = new System.Windows.Forms.Panel();
-            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEsquerda
             // 
             this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.pnlEsquerda.Controls.Add(this.btnLogout);
+            this.pnlEsquerda.Controls.Add(this.ptbFoto);
             this.pnlEsquerda.Controls.Add(this.btnRelatorio);
             this.pnlEsquerda.Controls.Add(this.btnFuncionarios);
             this.pnlEsquerda.Controls.Add(this.btnCursos);
@@ -54,6 +59,23 @@
             this.pnlEsquerda.Name = "pnlEsquerda";
             this.pnlEsquerda.Size = new System.Drawing.Size(168, 500);
             this.pnlEsquerda.TabIndex = 0;
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnRelatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 193);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
+            this.btnRelatorio.TabIndex = 10;
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.btnRelatorio.Click += new System.EventHandler(this.TrocarForm);
             // 
             // btnFuncionarios
             // 
@@ -88,16 +110,6 @@
             this.btnCursos.Text = "Cursos";
             this.btnCursos.UseVisualStyleBackColor = false;
             this.btnCursos.Click += new System.EventHandler(this.TrocarForm);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
             // 
             // btnHome
             // 
@@ -139,22 +151,40 @@
             this.pnlDireita.Size = new System.Drawing.Size(831, 500);
             this.pnlDireita.TabIndex = 1;
             // 
-            // btnRelatorio
+            // pictureBox2
             // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btnRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnRelatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
-            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(0, 193);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
-            this.btnRelatorio.TabIndex = 10;
-            this.btnRelatorio.Text = "Relatório";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
-            this.btnRelatorio.Click += new System.EventHandler(this.TrocarForm);
+            this.pictureBox2.BackgroundImage = global::educacaodofuturo.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackgroundImage = global::educacaodofuturo.Properties.Resources.logout;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(127, 459);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(38, 38);
+            this.btnLogout.TabIndex = 15;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.BackgroundImage = global::educacaodofuturo.Properties.Resources.userMale;
+            this.ptbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbFoto.Location = new System.Drawing.Point(3, 459);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(38, 38);
+            this.ptbFoto.TabIndex = 14;
+            this.ptbFoto.TabStop = false;
             // 
             // frmMenuDiretor
             // 
@@ -169,6 +199,7 @@
             this.pnlEsquerda.ResumeLayout(false);
             this.pnlEsquerda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +214,7 @@
         private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox ptbFoto;
     }
 }

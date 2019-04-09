@@ -53,6 +53,7 @@ namespace educacaodofuturo.Resources
             Email = snapshot.GetValue<string>("email");
             Nome = snapshot.GetValue<string>("nome");
             Cargo = snapshot.GetValue<string>("cargo");
+            Sexo = snapshot.GetValue<string>("sexo");
             action(this);
         }
 
