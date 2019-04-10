@@ -35,18 +35,25 @@ $(document).ready(function () {
     
 
     firebase.firestore().collection("Cursos").get().then(function (querySnapshot) {
+        areas = []
         querySnapshot.forEach(function (doc) {
             const data = doc.data();
             area = data.area
 
             select = document.getElementById('modal-area')
-            console.log(select.length)
+            teste = false
             for(i = 0; i < select.length; i++) {
-                if(area != select.options[i]) {
-                    $('#modal-area').append('<option>'+ area +'</option')
+                if(area == select.options[i].value) {
+                    teste = true
                 }
             }
+
+            if (teste == false) {
+                areas.push(area)
+                $('#modal-area').append('<option>'+ area +'</option')
+            }
         });
+
     });
 
 

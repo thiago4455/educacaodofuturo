@@ -6,6 +6,14 @@ $(document).ready(function () {
         }
     });
 
+    document.onkeydown=function(evt){
+        var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+        if(keyCode == 13)
+        {
+            $('#btn-entrar').click()
+        }
+    }
+
     $('#btn-entrar').click(function () {
         const email = $('#email').val()
         const senha = $('#senha').val()
