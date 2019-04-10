@@ -131,12 +131,33 @@ namespace educacaodofuturo.Resources
             actionRetList(funcionarios);
         }
 
-        public void RetFreqData(string campo, string campoValor, Action<List<Funcionario>> action)
+        public void RetFreq(string campo, string campoValor, Action<List<Funcionario>> action)
         {
             actionRetList = action;
-            new Resources.Firebase().RetornarFrequencia("FrequenciaFuncs", campo, campoValor,RetFreqDataResult);
+            new Resources.Firebase().RetornarFrequencia("FrequenciaFuncs", campo, campoValor,RetFreqResult);
         }
-        public void RetFreqDataResult(QuerySnapshot querySnapshot)
+        public void RetFreqResult(QuerySnapshot querySnapshot)
+        {
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            foreach (var document in querySnapshot)
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Cpf = document.GetValue<string>("cpf");
+                funcionario.HorarioEntrada = document.GetValue<string>("horarioEntrada");
+                funcionario.HorarioSaida = document.GetValue<string>("horarioSaida");
+                funcionario.SaidaIntervalo = document.GetValue<string>("saidaIntervalo");
+                funcionario.VoltaIntervalo = document.GetValue<string>("voltaIntervalo");
+                funcionarios.Add(funcionario);
+            }
+            actionRetList(funcionarios);
+        }
+
+        public void RetFreqCargo(string campo, string campoValor, Action<List<Funcionario>> action, string cargo)
+        {
+            actionRetList = action;
+            new Resources.Firebase().RetornarFrequenciaCargo("FrequenciaFuncs", campo, campoValor, cargo, RetFreqCargoResult);
+        }
+        public void RetFreqCargoResult(QuerySnapshot querySnapshot)
         {
             List<Funcionario> funcionarios = new List<Funcionario>();
             foreach (var document in querySnapshot)

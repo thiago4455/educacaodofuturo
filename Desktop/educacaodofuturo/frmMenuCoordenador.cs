@@ -55,7 +55,7 @@ namespace educacaodofuturo
             }
             else if (sender.Equals(btnRelatorio))
             {
-
+                SetForm(new frmFrequenciaProf());
             }
         }
 

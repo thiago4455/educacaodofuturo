@@ -32,12 +32,12 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnPlanosAulas = new System.Windows.Forms.Button();
             this.btnPlanosCursos = new System.Windows.Forms.Button();
             this.btnProfessores = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
@@ -100,6 +100,31 @@
             this.pnlEsquerda.Size = new System.Drawing.Size(168, 500);
             this.pnlEsquerda.TabIndex = 2;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackgroundImage = global::educacaodofuturo.Properties.Resources.logout;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(127, 459);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(38, 38);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.BackgroundImage = global::educacaodofuturo.Properties.Resources.userMale;
+            this.ptbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbFoto.Location = new System.Drawing.Point(3, 459);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(38, 38);
+            this.ptbFoto.TabIndex = 12;
+            this.ptbFoto.TabStop = false;
+            // 
             // btnRelatorio
             // 
             this.btnRelatorio.BackColor = System.Drawing.Color.Transparent;
@@ -113,8 +138,9 @@
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(168, 40);
             this.btnRelatorio.TabIndex = 11;
-            this.btnRelatorio.Text = "Relatórios";
+            this.btnRelatorio.Text = "Relatório";
             this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.btnRelatorio.Click += new System.EventHandler(this.TrocarForm);
             // 
             // btnPlanosAulas
             // 
@@ -164,31 +190,6 @@
             this.btnProfessores.Text = "Professores";
             this.btnProfessores.UseVisualStyleBackColor = false;
             this.btnProfessores.Click += new System.EventHandler(this.TrocarForm);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackgroundImage = global::educacaodofuturo.Properties.Resources.logout;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Location = new System.Drawing.Point(127, 459);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(38, 38);
-            this.btnLogout.TabIndex = 13;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // ptbFoto
-            // 
-            this.ptbFoto.BackgroundImage = global::educacaodofuturo.Properties.Resources.userMale;
-            this.ptbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptbFoto.Location = new System.Drawing.Point(3, 459);
-            this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(38, 38);
-            this.ptbFoto.TabIndex = 12;
-            this.ptbFoto.TabStop = false;
             // 
             // pictureBox2
             // 

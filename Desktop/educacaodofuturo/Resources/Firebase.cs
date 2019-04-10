@@ -37,7 +37,14 @@ namespace educacaodofuturo.Resources
         {
             var collection = await db.Collection(collectionString).WhereEqualTo(campo, valorCampo).GetSnapshotAsync();
             action(collection);
-            
+
+        }
+
+        public async void RetornarFrequenciaCargo(string collectionString, string campo, string valorCampo, string cargo, Action<QuerySnapshot> action)
+        {
+            var collection = await db.Collection(collectionString).WhereEqualTo(campo, valorCampo).WhereEqualTo("cargo",cargo).GetSnapshotAsync();
+            action(collection);
+
         }
 
         public async void CadastrarFuncionario(Dictionary<string, object> dados, Action<bool> action)

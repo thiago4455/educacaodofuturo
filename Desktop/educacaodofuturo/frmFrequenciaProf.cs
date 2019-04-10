@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace educacaodofuturo
 {
-    public partial class frmFrequenciaFuncs : Form
+    public partial class frmFrequenciaProf : Form
     {
-        public frmFrequenciaFuncs()
+        public frmFrequenciaProf()
         {
             InitializeComponent();
-            new Resources.Funcionario().RetFreq("data",DateTime.Now.ToString("dd/MM/yyyy"),ResultFrequencia);
+            new Resources.Funcionario().RetFreqCargo("data", DateTime.Now.ToString("dd/MM/yyyy"), ResultFrequencia,"Professor");
             cboOpcao.SelectedIndex = 0;
             mskPesquisar.Mask = @"99/99/9999";
         }
@@ -62,16 +62,16 @@ namespace educacaodofuturo
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             DateTime temp;
-            if(cboOpcao.SelectedIndex == 0)
+            if (cboOpcao.SelectedIndex == 0)
             {
                 if (DateTime.TryParse(mskPesquisar.Text, out temp))
-                    new Resources.Funcionario().RetFreq("data", mskPesquisar.Text, ResultFrequencia);
+                    new Resources.Funcionario().RetFreqCargo("data", mskPesquisar.Text, ResultFrequencia,"Professor");
                 else
                     MessageBox.Show("Data inválida!", "Erro");
             }
             else
             {
-                new Resources.Funcionario().RetFreq("cpf", mskPesquisar.Text, ResultFrequencia);
+                new Resources.Funcionario().RetFreqCargo("cpf", mskPesquisar.Text, ResultFrequencia,"Professor");
             }
         }
     }

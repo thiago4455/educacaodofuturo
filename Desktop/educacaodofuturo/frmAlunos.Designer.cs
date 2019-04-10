@@ -106,6 +106,7 @@
             this.btnAdicionarAluno.TabIndex = 4;
             this.btnAdicionarAluno.Text = "Adicionar Aluno";
             this.btnAdicionarAluno.UseVisualStyleBackColor = false;
+            this.btnAdicionarAluno.Click += new System.EventHandler(this.btnAdicionarAluno_Click);
             // 
             // lblTitulo
             // 
