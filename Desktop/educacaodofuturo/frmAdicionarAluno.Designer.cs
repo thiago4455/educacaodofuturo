@@ -35,7 +35,6 @@
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -49,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
+            this.cboTurma = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblLinha
@@ -130,24 +129,11 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.txtEmail.Location = new System.Drawing.Point(12, 126);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(237, 20);
+            this.txtEmail.Size = new System.Drawing.Size(342, 20);
             this.txtEmail.TabIndex = 11;
             this.txtEmail.Text = "Digite o email do aluno";
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.SystemColors.Control;
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtSenha.Location = new System.Drawing.Point(262, 126);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(233, 20);
-            this.txtSenha.TabIndex = 13;
-            this.txtSenha.Text = "Digite a senha do aluno";
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
-            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // txtRua
             // 
@@ -156,7 +142,7 @@
             this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.txtRua.Location = new System.Drawing.Point(12, 168);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(581, 20);
+            this.txtRua.Size = new System.Drawing.Size(529, 20);
             this.txtRua.TabIndex = 14;
             this.txtRua.Text = "Digite a rua do aluno";
             this.txtRua.Enter += new System.EventHandler(this.txtRua_Enter);
@@ -193,9 +179,9 @@
             this.txtNumero.BackColor = System.Drawing.SystemColors.Control;
             this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.txtNumero.Location = new System.Drawing.Point(617, 168);
+            this.txtNumero.Location = new System.Drawing.Point(565, 168);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(104, 20);
+            this.txtNumero.Size = new System.Drawing.Size(156, 20);
             this.txtNumero.TabIndex = 17;
             this.txtNumero.Text = "Número";
             this.txtNumero.Enter += new System.EventHandler(this.txtNumero_Enter);
@@ -236,7 +222,7 @@
             "SP",
             "SE",
             "TO"});
-            this.cboEstado.Location = new System.Drawing.Point(398, 245);
+            this.cboEstado.Location = new System.Drawing.Point(17, 245);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(143, 24);
             this.cboEstado.TabIndex = 18;
@@ -252,7 +238,7 @@
             "Masculino",
             "Feminino",
             "Prefiro não identificar"});
-            this.cboSexo.Location = new System.Drawing.Point(573, 245);
+            this.cboSexo.Location = new System.Drawing.Point(206, 245);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(148, 24);
             this.cboSexo.TabIndex = 20;
@@ -262,9 +248,9 @@
             this.mskCep.BackColor = System.Drawing.SystemColors.Control;
             this.mskCep.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mskCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.mskCep.Location = new System.Drawing.Point(508, 126);
+            this.mskCep.Location = new System.Drawing.Point(379, 126);
             this.mskCep.Name = "mskCep";
-            this.mskCep.Size = new System.Drawing.Size(213, 20);
+            this.mskCep.Size = new System.Drawing.Size(342, 20);
             this.mskCep.TabIndex = 21;
             this.mskCep.Text = "Digite o cep do aluno";
             this.mskCep.Enter += new System.EventHandler(this.mskCep_Enter);
@@ -339,25 +325,18 @@
             this.label4.Size = new System.Drawing.Size(806, 2);
             this.label4.TabIndex = 27;
             // 
-            // cboCargo
+            // cboTurma
             // 
-            this.cboCargo.BackColor = System.Drawing.SystemColors.Control;
-            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Items.AddRange(new object[] {
-            "Selecione o cargo",
-            "Diretor(a)",
-            "Pedagogo(a)",
-            "Coordenador(a)",
-            "Professor(a)",
-            "Secretário(a)",
-            "Bibliotecário(a)",
-            "Auxiliar"});
-            this.cboCargo.Location = new System.Drawing.Point(12, 245);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(351, 24);
-            this.cboCargo.TabIndex = 19;
+            this.cboTurma.BackColor = System.Drawing.SystemColors.Control;
+            this.cboTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTurma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cboTurma.FormattingEnabled = true;
+            this.cboTurma.Items.AddRange(new object[] {
+            "Selecione a turma"});
+            this.cboTurma.Location = new System.Drawing.Point(398, 245);
+            this.cboTurma.Name = "cboTurma";
+            this.cboTurma.Size = new System.Drawing.Size(275, 24);
+            this.cboTurma.TabIndex = 28;
             // 
             // frmAdicionarAluno
             // 
@@ -365,6 +344,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(742, 333);
+            this.Controls.Add(this.cboTurma);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -373,13 +353,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.mskCep);
             this.Controls.Add(this.cboSexo);
-            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtRua);
-            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.mskCpf);
@@ -405,7 +383,6 @@
         private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtCidade;
@@ -419,6 +396,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboCargo;
+        private System.Windows.Forms.ComboBox cboTurma;
     }
 }

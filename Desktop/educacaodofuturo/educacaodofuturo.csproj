@@ -193,6 +193,12 @@
     <Compile Include="frmHomeDiretor.Designer.cs">
       <DependentUpon>frmHomeDiretor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHomeProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeProfessor.Designer.cs">
+      <DependentUpon>frmHomeProfessor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHomeSecretario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     </Compile>
     <Compile Include="frmMenuDiretor.Designer.cs">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuProfessor.Designer.cs">
+      <DependentUpon>frmMenuProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuSecretario.cs">
       <SubType>Form</SubType>
@@ -274,6 +286,9 @@
     <EmbeddedResource Include="frmHomeDiretor.resx">
       <DependentUpon>frmHomeDiretor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeProfessor.resx">
+      <DependentUpon>frmHomeProfessor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHomeSecretario.resx">
       <DependentUpon>frmHomeSecretario.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuDiretor.resx">
       <DependentUpon>frmMenuDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuProfessor.resx">
+      <DependentUpon>frmMenuProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuSecretario.resx">
       <DependentUpon>frmMenuSecretario.cs</DependentUpon>

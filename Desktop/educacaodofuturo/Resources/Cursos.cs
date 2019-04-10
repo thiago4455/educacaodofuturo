@@ -17,6 +17,24 @@ namespace educacaodofuturo.Resources
 
         Action<List<Cursos>> actionRetCursos;
         Action<bool> actionCadastrar;
+        Action<List<string>> actionListString;
+
+        public void RetIds(Action<List<string>> action)
+        {
+            actionListString = action;
+            new Firebase().BuscarTodos(RetIdsResult, "Cursos");
+        }
+
+        private void RetIdsResult(QuerySnapshot querySnapshot)
+        {
+            List<string> ids = new List<string>();
+            foreach (var document in querySnapshot)
+            {
+                if (!ids.Contains(document.GetValue<string>("area")))
+                    ids.Add(document.GetValue<string>("area"));
+            }
+            actionListString(ids);
+        }
 
         public void RetTodos(Action<List<Cursos>> action)
         {

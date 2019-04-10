@@ -12,13 +12,22 @@ namespace educacaodofuturo
 {
     public partial class frmAdicionarAluno : Form
     {
-        bool nomePlaceholder = true, cpfPlaceholder = true, telefonePlaceholder = true, emailPlaceholder = true, senhaPlaceholder = true, cepPlaceholder = true, ruaPlaceholder = true, numeroPlaceholder = true, cidadePlaceholder = true, bairroPlaceholder = true;
+        bool nomePlaceholder = true, cpfPlaceholder = true, telefonePlaceholder = true, emailPlaceholder = true, cepPlaceholder = true, ruaPlaceholder = true, numeroPlaceholder = true, cidadePlaceholder = true, bairroPlaceholder = true;
         public frmAdicionarAluno()
         {
             InitializeComponent();
-            cboCargo.SelectedIndex = 0;
+            new Resources.Cursos().RetIds(ResultIds);
+            cboTurma.SelectedIndex = 0;
             cboEstado.SelectedIndex = 0;
             cboSexo.SelectedIndex = 0;
+        }
+
+        private void ResultIds(List<string> ids)
+        {
+            for (int i = 1; i <= ids.Count; i++)
+            {
+                cboTurma.Items.Insert(i, ids[i-1]);
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -39,7 +48,7 @@ namespace educacaodofuturo
         {
             if (txtNome.Text == "")
             {
-                txtNome.Text = "Digite o nome completo do funcionário";
+                txtNome.Text = "Digite o nome completo do Aluno";
                 nomePlaceholder = true;
             }
         }
@@ -59,7 +68,7 @@ namespace educacaodofuturo
             if (mskCpf.Text.Replace(" ", "").Length < 14)
             {
                 mskCpf.Mask = "";
-                mskCpf.Text = "Digite o cpf do funcionário";
+                mskCpf.Text = "Digite o cpf do Aluno";
                 cpfPlaceholder = true;
             }
         }
@@ -79,7 +88,7 @@ namespace educacaodofuturo
             if (mskTelefone.Text.Replace(" ", "").Length < 14)
             {
                 mskTelefone.Mask = "";
-                mskTelefone.Text = "Digite o telefone do funcionário";
+                mskTelefone.Text = "Digite o telefone do Aluno";
                 telefonePlaceholder = true;
             }
         }
@@ -97,26 +106,8 @@ namespace educacaodofuturo
         {
             if (txtEmail.Text == "")
             {
-                txtEmail.Text = "Digite o email do funcionário";
+                txtEmail.Text = "Digite o email do Aluno";
                 emailPlaceholder = true;
-            }
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            if (senhaPlaceholder)
-            {
-                txtSenha.Text = "";
-                senhaPlaceholder = false;
-            }
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-            if (txtSenha.Text == "")
-            {
-                txtSenha.Text = "Digite a senha do funcionário";
-                senhaPlaceholder = true;
             }
         }
 
@@ -135,7 +126,7 @@ namespace educacaodofuturo
             if (mskCep.Text.Replace(" ", "").Length < 9)
             {
                 mskCep.Mask = "";
-                mskCep.Text = "Digite o cep do funcionário";
+                mskCep.Text = "Digite o cep do Aluno";
                 cepPlaceholder = true;
             }
         }
@@ -153,7 +144,7 @@ namespace educacaodofuturo
         {
             if (txtRua.Text == "")
             {
-                txtRua.Text = "Digite a rua do funcionário";
+                txtRua.Text = "Digite a rua do Aluno";
                 ruaPlaceholder = true;
             }
         }
@@ -189,7 +180,7 @@ namespace educacaodofuturo
         {
             if (txtCidade.Text == "")
             {
-                txtCidade.Text = "Digite a cidade do funcionário";
+                txtCidade.Text = "Digite a cidade do Aluno";
                 cidadePlaceholder = true;
             }
         }
@@ -207,7 +198,7 @@ namespace educacaodofuturo
         {
             if (txtBairro.Text == "")
             {
-                txtBairro.Text = "Digite o nome completo do funcionário";
+                txtBairro.Text = "Digite o bairro completo do Aluno";
                 bairroPlaceholder = true;
             }
         }
@@ -215,32 +206,29 @@ namespace educacaodofuturo
         private void btnLimpar_Click(object sender, EventArgs e)
         {
 
-            txtNome.Text = "Digite o nome completo do funcionário";
+            txtNome.Text = "Digite o nome completo do Aluno";
             nomePlaceholder = true;
             mskCpf.Mask = "";
-            mskCpf.Text = "Digite o cpf do funcionário";
+            mskCpf.Text = "Digite o cpf do Aluno";
             cpfPlaceholder = true;
             mskTelefone.Mask = "";
-            mskTelefone.Text = "Digite o telefone do funcionário";
+            mskTelefone.Text = "Digite o telefone do Aluno";
             telefonePlaceholder = true;
-            txtEmail.Text = "Digite o email do funcionário";
+            txtEmail.Text = "Digite o email do Aluno";
             emailPlaceholder = true;
-            txtSenha.Text = "Digite a senha do funcionário";
-            senhaPlaceholder = true;
             mskCep.Mask = "";
-            mskCep.Text = "Digite o cep do funcionário";
+            mskCep.Text = "Digite o cep do Aluno";
             cepPlaceholder = true;
-            txtRua.Text = "Digite a rua do funcionário";
+            txtRua.Text = "Digite a rua do Aluno";
             ruaPlaceholder = true;
             txtNumero.Text = "Número";
             numeroPlaceholder = true;
-            txtCidade.Text = "Digite a cidade do funcionário";
+            txtCidade.Text = "Digite a cidade do Aluno";
             cidadePlaceholder = true;
-            txtBairro.Text = "Digite o nome completo do funcionário";
+            txtBairro.Text = "Digite o nome completo do Aluno";
             bairroPlaceholder = true;
             cboEstado.SelectedIndex = 0;
             cboSexo.SelectedIndex = 0;
-            cboCargo.SelectedIndex = 0;
         }
 
         private void btnAdicionarAluno_Click(object sender, EventArgs e)
@@ -248,9 +236,9 @@ namespace educacaodofuturo
             string erros = "";
             if ((txtNome.Text == "" || nomePlaceholder) || (mskCpf.Text.Replace(" ", "").Length < 14 || cpfPlaceholder) ||
                 (mskTelefone.Text.Replace(" ", "").Length < 14 || telefonePlaceholder) || (txtEmail.Text == "" || emailPlaceholder) ||
-                (txtSenha.Text == "" || senhaPlaceholder) || (mskCep.Text.Replace(" ", "").Length < 9 || cepPlaceholder) || (txtRua.Text == "" || ruaPlaceholder) ||
+                (mskCep.Text.Replace(" ", "").Length < 9 || cepPlaceholder) || (txtRua.Text == "" || ruaPlaceholder) ||
                 (txtNumero.Text == "" || numeroPlaceholder) || (txtCidade.Text == "" || cidadePlaceholder) || (txtBairro.Text == "" || bairroPlaceholder) ||
-                cboCargo.SelectedIndex == 0 || cboEstado.SelectedIndex == 0 || cboSexo.SelectedIndex == 0)
+                cboEstado.SelectedIndex == 0 || cboSexo.SelectedIndex == 0 || cboTurma.SelectedIndex == 0)
             {
                 erros += "Preencha todos os campos";
             }
@@ -271,34 +259,33 @@ namespace educacaodofuturo
             }
             else
             {
-                Resources.Funcionario funcionario = new Resources.Funcionario();
-                funcionario.Nome = txtNome.Text;
-                funcionario.Cpf = mskCpf.Text;
-                funcionario.Telefone = mskTelefone.Text;
-                funcionario.Email = txtEmail.Text;
-                funcionario.Senha = txtSenha.Text;
-                funcionario.Cep = mskCep.Text;
-                funcionario.Rua = txtRua.Text;
-                funcionario.Numero = txtNumero.Text;
-                funcionario.Cidade = txtCidade.Text;
-                funcionario.Bairro = txtBairro.Text;
-                funcionario.Cargo = cboCargo.Text;
-                funcionario.Sexo = cboSexo.Text;
-                funcionario.Estado = cboEstado.Text;
+                Resources.Aluno aluno = new Resources.Aluno();
+                aluno.Nome = txtNome.Text;
+                aluno.Cpf = mskCpf.Text;
+                aluno.Telefone = mskTelefone.Text;
+                aluno.Email = txtEmail.Text;
+                aluno.Cep = mskCep.Text;
+                aluno.Rua = txtRua.Text;
+                aluno.Numero = txtNumero.Text;
+                aluno.Cidade = txtCidade.Text;
+                aluno.Bairro = txtBairro.Text;
+                aluno.Sexo = cboSexo.Text;
+                aluno.Estado = cboEstado.Text;
+                aluno.Turma = cboTurma.Text;
 
-                funcionario.Cadastrar(CadastrarResult);
+                aluno.Cadastrar(CadastrarResult);
             }
         }
         private void CadastrarResult(bool cadastrado)
         {
             if (cadastrado)
             {
-                MessageBox.Show("Funcionário cadastrado com sucesso");
+                MessageBox.Show("Aluno cadastrado com sucesso");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Não foi possível cadastrar o funcionário, tente novamente mais tarde", "Erro");
+                MessageBox.Show("Não foi possível cadastrar o Aluno, tente novamente mais tarde", "Erro");
                 this.Close();
             }
         }

@@ -206,7 +206,7 @@ namespace educacaodofuturo
         {
             if (txtBairro.Text == "")
             {
-                txtBairro.Text = "Digite o nome completo do professor";
+                txtBairro.Text = "Digite o bairro do professor";
                 bairroPlaceholder = true;
             }
         }
