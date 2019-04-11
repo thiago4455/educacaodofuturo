@@ -157,6 +157,7 @@
             this.btnPlanosAulas.TabIndex = 10;
             this.btnPlanosAulas.Text = "Planos de Aulas";
             this.btnPlanosAulas.UseVisualStyleBackColor = false;
+            this.btnPlanosAulas.Click += new System.EventHandler(this.TrocarForm);
             // 
             // btnPlanosCursos
             // 
@@ -173,6 +174,7 @@
             this.btnPlanosCursos.TabIndex = 9;
             this.btnPlanosCursos.Text = "Planos de Cursos";
             this.btnPlanosCursos.UseVisualStyleBackColor = false;
+            this.btnPlanosCursos.Click += new System.EventHandler(this.TrocarForm);
             // 
             // btnProfessores
             // 

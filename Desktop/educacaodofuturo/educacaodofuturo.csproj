@@ -145,6 +145,12 @@
     <Compile Include="frmAdicionarFuncs.Designer.cs">
       <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdicionarPlanoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarPlanoCurso.Designer.cs">
+      <DependentUpon>frmAdicionarPlanoCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdicionarProfessores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,12 @@
     <Compile Include="frmMenuSecretario.Designer.cs">
       <DependentUpon>frmMenuSecretario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlanoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanoCurso.Designer.cs">
+      <DependentUpon>frmPlanoCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProfessores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +265,7 @@
     <Compile Include="Resources\Cursos.cs" />
     <Compile Include="Resources\Firebase.cs" />
     <Compile Include="Resources\Funcionario.cs" />
+    <Compile Include="Resources\PlanoCurso.cs" />
     <EmbeddedResource Include="frmAdicionarAluno.resx">
       <DependentUpon>frmAdicionarAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdicionarFuncs.resx">
       <DependentUpon>frmAdicionarFuncs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarPlanoCurso.resx">
+      <DependentUpon>frmAdicionarPlanoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdicionarProfessores.resx">
       <DependentUpon>frmAdicionarProfessores.cs</DependentUpon>
@@ -303,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuSecretario.resx">
       <DependentUpon>frmMenuSecretario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanoCurso.resx">
+      <DependentUpon>frmPlanoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfessores.resx">
       <DependentUpon>frmProfessores.cs</DependentUpon>

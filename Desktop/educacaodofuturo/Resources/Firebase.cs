@@ -98,7 +98,7 @@ namespace educacaodofuturo.Resources
             action(collection);
         }
 
-        public async void Cadastrar(Dictionary<string,object> values, Action<bool> action, string collectionString)
+        public async void Cadastrar(Dictionary<string, object> values, Action<bool> action, string collectionString)
         {
             try
             {
@@ -106,7 +106,21 @@ namespace educacaodofuturo.Resources
                 await collection.AddAsync(values);
                 action(true);
             }
-            catch 
+            catch
+            {
+                action(false);
+            }
+        }
+
+        public async void CadastrarSub(Dictionary<string, object> values, Action<bool> action, string collectionString, string documentString, string subCollection)
+        {
+            try
+            {
+                var collection = db.Collection(collectionString).Document(documentString).Collection(subCollection);
+                await collection.AddAsync(values);
+                action(true);
+            }
+            catch
             {
                 action(false);
             }

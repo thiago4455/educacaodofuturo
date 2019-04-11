@@ -47,7 +47,7 @@ namespace educacaodofuturo
             }
             else if (sender.Equals(btnPlanosCursos))
             {
-
+                SetForm(new frmPlanoCurso());
             }
             else if (sender.Equals(btnPlanosAulas))
             {
