@@ -17,7 +17,7 @@
     <!-- Fontes -->
     <link rel="stylesheet" href="../../fonts/fontes.css">
 
-    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="css/plano-curso.css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Curso</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Matéria</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -47,31 +47,25 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-row">
-                            <div class="form-group col-12 col-md-6">
+                            <div class="form-group col-md-5 col-12">
                                 <input id="modal-nome" type="text" class=" modal-input"
-                                    placeholder="Digite o nome do Curso">
+                                    placeholder="Digite o nome da matéria">
                             </div>
-                            <div class="form-group col-12 col-md-6">
-                                <select id="modal-area" class="modal-input">
-                                    <option selected class="modal-input">Selecione...</option>
-                                    <option>Exatas</option>
-                                    <option>Linguagens</option>
-                                    <option>Ciências Humanas</option>
-                                    <option>Ciências da Natureza</option>
-                                    <option>Informática</option>
-                                    <option>Economia</option>
-                                    <option>Outros</option>
-                                </select>
+                            <div class="form-group col-md-7 col-12">
+                                <input id="modal-descricao" type="text" class=" modal-input"
+                                    placeholder="Digite a descrição da matéria">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-12 col-md-6">
+                            <div class="form-group col-md-6 col-12">
                                 <input id="modal-cargaHor" type="text" class="modal-input"
-                                    placeholder="Digite a carga horária do curso">
+                                    placeholder="Digite a carga horária da matéria">
                             </div>
-                            <div class="form-group col-12 col-md-6">
-                                <input id="modal-mensalidade" type="text" class="modal-input"
-                                    placeholder="Digite o valor da mensalidade (sem R$)">
+                            <div class="form-group col-md-6 col-12">
+                                <select id="modal-curso" class="modal-input">
+                                    <option selected class="modal-input">Curso...</option>
+
+                                </select>
                             </div>
                         </div>
                     </form>
@@ -80,28 +74,27 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" id="modal-limpar">Limpar Formulário</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal-sair">Sair</button>
-                    <button type="button" class="btn btn-success" id="modal-adicionar">Adicionar Curso</button>
+                    <button type="button" class="btn btn-success" id="modal-adicionar">Adicionar Matéria</button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="top">
-        <h1 id="title">Cursos</h1>
+        <h1 id="title">Planos de Curso</h1>
     </div>
 
     <div class="bar-options">
-        <div class="btn" id="btn-adicionar" data-toggle="modal" data-target="#modal-addCliente">Adicionar Curso</div>
+        <div class="btn" id="btn-adicionar" data-toggle="modal" data-target="#modal-addCliente">Adicionar Matéria</div>
     </div>
 
     <div class="main">
         <table class="table table-bordered" id="table-prod">
             <thead>
                 <tr>
-                    <th scope="col">Nome do Curso</th>
-                    <th scope="col">Área</th>
+                    <th scope="col">Nome da Matéria</th>
                     <th scope="col">Carga Horária</th>
-                    <th scope="col">Mensalidade</th>
+                    <th scope="col">Curso</th>
                 </tr>
             </thead>
             <tbody id="table-info">
@@ -123,7 +116,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/cursos.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/plano-curso.js"></script>
     <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
 
 </body>

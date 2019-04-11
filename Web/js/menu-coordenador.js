@@ -54,8 +54,8 @@ function Page(id) {
         const caminho = 'coordenador/professores.html'
         PageLoad(caminho)
     }
-    else if (id == 'nav-func') {
-        const caminho = 'coordenador/funcionarios.html'
+    else if (id == 'nav-cursos') {
+        const caminho = 'coordenador/plano-curso.html'
         PageLoad(caminho)
     }
     else if (id == 'nav-relatorio') {
