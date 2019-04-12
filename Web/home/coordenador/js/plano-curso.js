@@ -38,18 +38,24 @@ $(document).ready(function () {
         const descricao = $('#modal-descricao').val()
         const curso = $('#modal-curso').val()
 
+
         if (!nome || !cargaHor || !descricao || !curso || curso == 'Curso...') {
             alert('Preencha todos os campos')
         }
         else {
-            firebase.firestore().collection('Cursos/' + uid + '/Materias').doc(snapshot.user.uid).set({
-                nomeCurso: nome,
-                cargaHor: cargaHor,
-                descricao: descricao,
-                nomeMateria: curso
-            }).then(function () {
-                alert('Matéria cadastrada com sucesso.')
-                firebase.auth().signOut()
+            firebase.firestore().collection("Cursos").where('nome', '==', curso).get().then(snapshot => {
+                snapshot.forEach(doc => {
+                    const uid = doc.id
+                    firebase.firestore().collection('Cursos/' + uid + '/Materias').doc().set({
+                        nomeCurso: nome,
+                        cargaHor: cargaHor,
+                        descricao: descricao,
+                        nomeMateria: curso
+                    }).then(function () {
+                        alert('Matéria cadastrada com sucesso.')
+                        firebase.auth().signOut()
+                    })
+                })
             })
         }
     })
@@ -57,8 +63,9 @@ $(document).ready(function () {
     function OrderByName() {
         firebase.firestore().collection("Cursos").orderBy("area", "asc").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
-                const data = doc.data();
-                $('#table-info').append("<tr> <th>" + data.nomeCurso + "</th> <th>" + data.cargaHor + "</th> <th>" + data.descricao + "</th> <th>" + data.nomeMateria + "</th> </tr>")
+                // const data = doc.children.data();
+                console.log(doc.data())
+                // $('#table-info').append("<tr> <th>" + data.nomeCurso + "</th> <th>" + data.cargaHor + "</th> <th>" + data.descricao + "</th> <th>" + data.nomeMateria + "</th> </tr>")
             });
         });
         setTimeout(OrderLoad, 2000)
