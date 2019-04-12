@@ -62,9 +62,13 @@ $(document).ready(function () {
 
     function OrderByName() {
         firebase.firestore().collection("Cursos").orderBy("area", "asc").get().then(function (querySnapshot) {
+            console.log(querySnapshot.docs)
+            console.log(querySnapshot.metadata)
             querySnapshot.forEach(function (doc) {
-                // const data = doc.children.data();
-                console.log(doc.data())
+                // const data = doc.children.data();    
+                // console.log(doc.child)
+                // console.log(doc.key)
+                // console.log(doc.data())
                 // $('#table-info').append("<tr> <th>" + data.nomeCurso + "</th> <th>" + data.cargaHor + "</th> <th>" + data.descricao + "</th> <th>" + data.nomeMateria + "</th> </tr>")
             });
         });
