@@ -39,6 +39,7 @@
             this.btnPlanosCursos = new System.Windows.Forms.Button();
             this.btnProfessores = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnPonto = new System.Windows.Forms.Button();
             this.pnlEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,6 +86,7 @@
             // pnlEsquerda
             // 
             this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.pnlEsquerda.Controls.Add(this.btnPonto);
             this.pnlEsquerda.Controls.Add(this.btnLogout);
             this.pnlEsquerda.Controls.Add(this.ptbFoto);
             this.pnlEsquerda.Controls.Add(this.btnRelatorio);
@@ -203,6 +205,23 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+            // btnPonto
+            // 
+            this.btnPonto.BackColor = System.Drawing.Color.Transparent;
+            this.btnPonto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPonto.ForeColor = System.Drawing.Color.White;
+            this.btnPonto.Location = new System.Drawing.Point(0, 285);
+            this.btnPonto.Name = "btnPonto";
+            this.btnPonto.Size = new System.Drawing.Size(168, 40);
+            this.btnPonto.TabIndex = 14;
+            this.btnPonto.Text = "Ponto";
+            this.btnPonto.UseVisualStyleBackColor = false;
+            this.btnPonto.Click += new System.EventHandler(this.TrocarForm);
+            // 
             // frmMenuCoordenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,5 +253,6 @@
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.PictureBox ptbFoto;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnPonto;
     }
 }

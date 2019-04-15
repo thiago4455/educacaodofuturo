@@ -35,6 +35,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlDireita = new System.Windows.Forms.Panel();
+            this.btnPonto = new System.Windows.Forms.Button();
             this.pnlEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -43,6 +44,7 @@
             // pnlEsquerda
             // 
             this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.pnlEsquerda.Controls.Add(this.btnPonto);
             this.pnlEsquerda.Controls.Add(this.btnLogout);
             this.pnlEsquerda.Controls.Add(this.ptbFoto);
             this.pnlEsquerda.Controls.Add(this.pictureBox2);
@@ -129,6 +131,23 @@
             this.pnlDireita.Size = new System.Drawing.Size(831, 500);
             this.pnlDireita.TabIndex = 3;
             // 
+            // btnPonto
+            // 
+            this.btnPonto.BackColor = System.Drawing.Color.Transparent;
+            this.btnPonto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.btnPonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(91)))));
+            this.btnPonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
+            this.btnPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPonto.ForeColor = System.Drawing.Color.White;
+            this.btnPonto.Location = new System.Drawing.Point(0, 101);
+            this.btnPonto.Name = "btnPonto";
+            this.btnPonto.Size = new System.Drawing.Size(168, 40);
+            this.btnPonto.TabIndex = 15;
+            this.btnPonto.Text = "Ponto";
+            this.btnPonto.UseVisualStyleBackColor = false;
+            this.btnPonto.Click += new System.EventHandler(this.TrocarForm);
+            // 
             // frmMenuProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,5 +175,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlDireita;
+        private System.Windows.Forms.Button btnPonto;
     }
 }

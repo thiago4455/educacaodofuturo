@@ -241,6 +241,12 @@
     <Compile Include="frmPlanoCurso.Designer.cs">
       <DependentUpon>frmPlanoCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPonto.Designer.cs">
+      <DependentUpon>frmPonto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProfessores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanoCurso.resx">
       <DependentUpon>frmPlanoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPonto.resx">
+      <DependentUpon>frmPonto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfessores.resx">
       <DependentUpon>frmProfessores.cs</DependentUpon>

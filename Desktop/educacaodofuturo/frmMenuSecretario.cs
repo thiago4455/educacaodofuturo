@@ -36,6 +36,10 @@ namespace educacaodofuturo
             {
                 SetForm(new frmAlunos());
             }
+            else if (sender.Equals(btnPonto))
+            {
+                SetForm(new frmPonto(funcionarioLogado));
+            }
         }
 
         private void SetForm(Form form)

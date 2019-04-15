@@ -53,6 +53,10 @@ namespace educacaodofuturo
             {
                 SetForm(new frmFrequenciaFuncs());
             }
+            else if (sender.Equals(btnPonto))
+            {
+                SetForm(new frmPonto(funcionarioLogado));
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
