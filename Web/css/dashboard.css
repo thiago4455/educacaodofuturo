@@ -1,0 +1,359 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Google-Reg', Helvetica, sans-serif;
+}
+
+/* Nav Lateral */
+
+.nav-lateral {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #253544;
+}
+
+.title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #1e2a35;
+}
+
+.title h1 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.title img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 5px 0;
+}
+
+.nav-itens {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-itens h1 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 30px;
+}
+
+.item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item-active {
+    background-color: #ffffff1f !important;
+}
+
+.item:hover {
+    background-color: #ffffff1f;
+    transition: .5s;
+}
+
+.item i {
+    color: #fff;
+    margin-left: 50px;
+}
+
+.item p {
+    font-size: .9rem;
+    color: #fff;
+    margin: 0 0 0 30px;
+}
+
+/* Center */
+
+.center {
+    width: 83%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.bloco-central {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+}
+
+/* Nav Top */
+
+.nav-top {
+    width: 100%;
+    height: 8%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.campo-busca {
+    width: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#busca-input {
+    width: 0;
+    height: 70%;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #efefef;
+    margin-right: 20px;
+    transition: 1s;
+}
+
+.busca-active {
+    width: 600px !important;
+    padding: 10px !important;
+    transition: 1s ease-in;
+}
+
+#busca-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.profile-options {
+    width: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#pic-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 15px;
+}
+
+#pic-nome {
+    font-size: 1rem;
+    margin: 0 20px 0 0;
+    color: #333;
+}
+
+.dropdown-menu {
+    left: -70px !important;
+    top: 10px !important;
+}
+
+#btn-drop:focus {
+    box-shadow: none;
+}
+
+.cel-menu {
+    display: none;
+}
+
+#btn-voltar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    /* Nav-Lateral */
+    .nav-lateral {
+        display: none;
+        position: fixed;
+        width: 70%;
+    }
+    .title {
+        width: 100%;
+        height: 10%;
+        min-height: 90px;
+    }
+    .title h1 {
+        font-size: 1.1rem;
+    }
+    .title img {
+        width: 28px;
+        height: 28px;
+    }
+    .nav-itens h1 {
+        font-size: 1rem;
+        margin: 25px;
+    }
+    .item i {
+        margin-left: 30px;
+    }
+    /* Center */
+    .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Nav Top */
+    .nav-top {
+        min-height: 60px;
+        overflow: hidden
+    }
+    .campo-busca {
+        display: none;  
+    } 
+    .profile-options {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 auto;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .cel-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: unset;
+        height: 30px;
+        padding: 5px 10px;
+        background-color: #253544;
+        border-radius: 5px;
+        cursor: pointer
+    }
+
+    .cel-menu i {
+        color: #fff;
+    }
+
+    #pic-profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 0 25px 0 15px;
+    }
+    #pic-nome {
+        font-size: .9rem;
+        margin: 0 20px 0 0;
+        color: #333;
+    }
+    .dropdown-menu {
+        left: -10px !important;
+        top: 10px !important;
+    }
+
+    #loading h1 {
+        font-family: 'Google-Bold';
+        color: #fff;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+    
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    #btn-voltar {
+        z-index: 999;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #222;
+        cursor: pointer;
+    }
+}
+
+/* Loading */
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #253544;
+}
+
+#loading h1 {
+    font-family: 'Google-Bold';
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

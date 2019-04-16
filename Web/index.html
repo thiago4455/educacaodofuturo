@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Gestão Escolar - Educação do Futuro</title>
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+	<!-- Fontes -->
+	<link rel="stylesheet" href="fonts/fontes.css">
+
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+	<div class="top-bar">
+		<h1>Gestão Escolar - Login</h1>
+		<h2>Educação do Futuro</h2>
+	</div>
+
+	<div class="logo-area">
+		<img src="assets/icons/logo.png" alt="logo">
+		<h1>Educação do Futuro</h1>
+	</div>
+	<div class="dash">
+		<h1 id="title">
+			Login
+		</h1>
+		<input type="email" id="email" class="input" placeholder="Digite seu email">
+		<input type="password" id="senha" class="input" placeholder="Digite sua senha">
+		<button id="btn-entrar" class="btn">Entrar</button>
+
+	</div>
+
+	<div class="alert alert-danger">
+		<p id="alert-message" style="margin: 0 20px 0 0"></p>
+		<button type="button" class="close">
+			<span>&times;</span>
+		</button>
+	</div>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+	<script type="text/javascript" src="js/firebase.js">
+	</script>
+
+	<!-- My Js -->
+
+	<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/dashboard.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

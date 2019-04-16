@@ -1,0 +1,160 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../assets/img/fundo.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: 'Google-Reg';
+}
+
+.top-bar {
+    width: 100%;
+    height: 30px;
+    padding: 0 40px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f6f6f6;
+    position: absolute;
+}
+
+.top-bar h1, .top-bar h2 {
+    font-size: .8rem;
+    font-family: 'Google-Bold';
+    color: #666;
+    margin: 0;
+}
+
+.top-bar h2 {
+    margin: 0 0 0 auto;
+}
+
+.logo-area {
+    margin-top: 100px;
+    max-width: 700px;
+    width: 700px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    border-radius: 6px;
+}
+
+.logo-area img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-area h1 {
+    font-family: 'Google-Bold';
+    font-size: 1.8rem;
+    margin: 0 0 0 30px;
+    color: #333;
+}
+
+.dash {
+    max-width: 700px;
+    width: 700px;
+    margin-top: 15px;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    border-radius: 2px;
+}
+
+#title {
+    font-family: 'Google-Bold';
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.input {
+    width: 600px;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.input:focus {
+    border-bottom: 2px solid #253544;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+#btn-entrar {
+    width: 600px;
+    height: 40px;
+    color: #fff;
+    background-color: #253544;
+}
+
+.alert {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+@media(max-width: 600px) {
+    .top-bar {
+        display: none;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .logo-area {
+        margin-top: 30px;
+        width: 100%;
+        height: 70px;
+    }
+    
+    .logo-area img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-area h1 {
+        font-size: 1.3rem;
+    }
+
+    .dash {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .input {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-bottom: 2px solid #999;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    #btn-entrar {
+        width: 100%;
+    }
+
+    .alert {
+        top: unset;
+        right: unset;
+        bottom: 30px;
+    }
+}
