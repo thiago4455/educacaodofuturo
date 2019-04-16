@@ -51,6 +51,7 @@ namespace educacaodofuturo.Resources
             Funcionario func = new Funcionario();
             Id = snapshot.Id;
             Email = snapshot.GetValue<string>("email");
+            Cpf = snapshot.GetValue<string>("cpf");
             Nome = snapshot.GetValue<string>("nome");
             Cargo = snapshot.GetValue<string>("cargo");
             Sexo = snapshot.GetValue<string>("sexo");
@@ -97,6 +98,7 @@ namespace educacaodofuturo.Resources
                 Funcionario funcionario = new Funcionario();
                 funcionario.Id = document.Id;
                 funcionario.Nome = document.GetValue<string>("nome");
+                funcionario.Cpf = document.GetValue<string>("cpf");
                 funcionario.Cargo = document.GetValue<string>("cargo");
                 funcionario.Email = document.GetValue<string>("email");
                 funcionario.Telefone = document.GetValue<string>("telefone");
@@ -171,6 +173,26 @@ namespace educacaodofuturo.Resources
                 funcionarios.Add(funcionario);
             }
             actionRetList(funcionarios);
+        }
+
+        public void BuscarFreq(string data, Action<Funcionario> action)
+        {
+            this.action = action;
+            new Resources.Firebase().GetFreq(Cpf, data, Cargo, action);
+
+        }
+
+        public void AlterarFreq(string data, Action<bool> action)
+        {
+            Dictionary<string, object> values = new Dictionary<string, object>();
+            values.Add("cpf", Cpf);
+            values.Add("data", data);
+            values.Add("cargo", Cargo);
+            values.Add("horarioEntrada", HorarioEntrada);
+            values.Add("horarioSaida", HorarioSaida);
+            values.Add("saidaIntervalo", SaidaIntervalo);
+            values.Add("voltaIntervalo", VoltaIntervalo);
+            new Resources.Firebase().AlterarFreq(Cpf, data, values, action);
         }
     }
 }
